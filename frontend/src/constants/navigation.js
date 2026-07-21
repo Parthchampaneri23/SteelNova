@@ -13,27 +13,27 @@ export const navigation = [
         dropdown: [
             {
                 title: "Industrial Pumps",
-                path: "/products/pumps",
+                path: "/products#industrial-pumps",
             },
             {
                 title: "Industrial Valves",
-                path: "/products/valves",
+                path: "/products#industrial-valves",
             },
             {
                 title: "Heat Exchangers",
-                path: "/products/heat-exchangers",
+                path: "/products#heat-exchangers",
             },
             {
                 title: "Storage Tanks",
-                path: "/products/storage-tanks",
+                path: "/products#storage-tanks",
             },
             {
                 title: "Pressure Vessels",
-                path: "/products/pressure-vessels",
+                path: "/products#pressure-vessels",
             },
             {
-                title: "Pipe Fittings",
-                path: "/products/pipe-fittings",
+                title: "Custom Fabrication",
+                path: "/products#custom-fabrication",
             },
         ],
     },

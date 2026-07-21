@@ -1,10 +1,21 @@
+import ContactHero from "../../components/contact/ContactHero";
+import ContactInfo from "../../components/contact/ContactInfo";
+import ContactForm from "../../components/contact/ContactForm";
+import GoogleMap from "../../components/contact/GoogleMap";
+import FAQ from "../../components/contact/FAQ";
+import ContactCTA from "../../components/contact/ContactCTA";
+
+
 const Contact = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <h1 className="text-5xl font-bold text-slate-800">
-                Contact Page
-            </h1>
-        </div>
+        <>
+            <ContactHero />
+            <ContactInfo />
+            <ContactForm />
+            <GoogleMap />
+            <FAQ />
+            <ContactCTA />
+        </>
     );
 };
 
