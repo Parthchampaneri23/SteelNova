@@ -32,7 +32,7 @@ const FAQ = () => {
     };
 
     return (
-        <section className="bg-slate-50 py-24">
+        <section className="bg-slate-50 py-16">
 
             <div className="max-w-5xl mx-auto px-6">
 
@@ -64,8 +64,8 @@ const FAQ = () => {
                             <div
                                 key={index}
                                 className={`overflow-hidden rounded-3xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${isOpen
-                                        ? "border-blue-600 bg-white shadow-xl"
-                                        : "border-slate-200 bg-white"
+                                    ? "border-blue-600 bg-white shadow-xl"
+                                    : "border-slate-200 bg-white"
                                     }`}
                             >
 
@@ -76,8 +76,8 @@ const FAQ = () => {
 
                                     <h3
                                         className={`text-xl font-semibold transition ${isOpen
-                                                ? "text-blue-600"
-                                                : "text-slate-900"
+                                            ? "text-blue-600"
+                                            : "text-slate-900"
                                             }`}
                                     >
                                         {faq.question}
@@ -85,8 +85,8 @@ const FAQ = () => {
 
                                     <div
                                         className={`flex h-11 w-11 items-center justify-center rounded-full transition ${isOpen
-                                                ? "bg-blue-600 text-white"
-                                                : "bg-slate-100 text-slate-700"
+                                            ? "bg-blue-600 text-white"
+                                            : "bg-slate-100 text-slate-700"
                                             }`}
                                     >
                                         {isOpen ? (
@@ -100,8 +100,8 @@ const FAQ = () => {
 
                                 <div
                                     className={`grid transition-all duration-500 ${isOpen
-                                            ? "grid-rows-[1fr]"
-                                            : "grid-rows-[0fr]"
+                                        ? "grid-rows-[1fr]"
+                                        : "grid-rows-[0fr]"
                                         }`}
                                 >
                                     <div className="overflow-hidden">
