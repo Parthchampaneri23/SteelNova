@@ -1,17 +1,21 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+
 import { allProducts } from "../../data/allProducts";
 
 const ProductDetails = () => {
     const { slug } = useParams();
 
-    const product = allProducts.find(
-        (item) => item.slug === slug
-    );
+    console.log("Slug:", slug);
+    console.log("Products:", allProducts);
+
+    const product = allProducts.find((item) => item.slug === slug);
+
+    console.log("Product Found:", product);
 
     if (!product) {
         return (
-            <section className="py-16 text-center">
+            <section className="py-32 text-center">
                 <h2 className="text-4xl font-bold">
                     Product Not Found
                 </h2>
@@ -28,7 +32,8 @@ const ProductDetails = () => {
     }
 
     return (
-        <section className="bg-slate-50 py-16">
+        <section className="bg-slate-50 py-24">
+
             <div className="max-w-7xl mx-auto px-6">
 
                 <Link
@@ -41,13 +46,11 @@ const ProductDetails = () => {
 
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-                    <div className="group overflow-hidden rounded-3xl bg-white p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                        <img
-                            src={product.image}
-                            alt={product.name}
-                            className="w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                    </div>
+                    <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full rounded-3xl shadow-xl"
+                    />
 
                     <div>
 
@@ -64,12 +67,15 @@ const ProductDetails = () => {
                         </p>
 
                         <div className="mt-8">
+
                             <h3 className="text-2xl font-bold">
                                 Key Features
                             </h3>
 
                             <div className="mt-5 space-y-4">
+
                                 {product.features.map((feature, index) => (
+
                                     <div
                                         key={index}
                                         className="flex items-center gap-3"
@@ -82,12 +88,17 @@ const ProductDetails = () => {
                                         <span className="text-slate-700">
                                             {feature}
                                         </span>
+
                                     </div>
+
                                 ))}
+
                             </div>
+
                         </div>
 
                         <div className="mt-10">
+
                             <h3 className="text-2xl font-bold">
                                 Applications
                             </h3>
@@ -95,11 +106,15 @@ const ProductDetails = () => {
                             <p className="mt-4 text-slate-600">
                                 {product.application}
                             </p>
+
                         </div>
 
-                        <button className="mt-10 inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white hover:bg-blue-700 transition">
+                        <button className="mt-10 inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700">
+
                             Request Quote
+
                             <ArrowRight size={20} />
+
                         </button>
 
                     </div>
@@ -107,6 +122,7 @@ const ProductDetails = () => {
                 </div>
 
             </div>
+
         </section>
     );
 };

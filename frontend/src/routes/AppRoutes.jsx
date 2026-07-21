@@ -14,15 +14,18 @@ import Careers from "../pages/Careers/Careers";
 import Contact from "../pages/Contact/Contact";
 import NotFound from "../pages/NotFound/NotFound";
 
+import ScrollToTop from "../components/common/ScrollToTop";
+
 const AppRoutes = () => {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Routes>
                 <Route element={<MainLayout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/products" element={<Products />} />
-                    <Route path="/products/:id" element={<ProductDetails />} />
+                    <Route path="/products/:slug" element={<ProductDetails />} />
                     <Route path="/industries" element={<Industries />} />
                     <Route path="/infrastructure" element={<Infrastructure />} />
                     <Route path="/projects" element={<Projects />} />
