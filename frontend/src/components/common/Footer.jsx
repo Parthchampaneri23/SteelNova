@@ -154,7 +154,7 @@ const Footer = () => {
 
                         <div className="flex gap-3">
                             <MapPin className="text-blue-500 mt-1" size={20} />
-                            <span>Mumbai, Maharashtra, India</span>
+                            <span>Vapi, Gujarat, India</span>
                         </div>
 
                         <div className="flex gap-3">
