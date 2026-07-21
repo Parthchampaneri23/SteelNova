@@ -63,7 +63,7 @@ const ManufacturingExcellence = () => {
                     <div className="overflow-hidden rounded-3xl shadow-2xl">
 
                         <img
-                            src="../../src/assets/images/cta/cta-factory.png"
+                            src="/about/cta-factory.png"
                             alt="Manufacturing"
                             className="h-full w-full object-cover transition duration-700 hover:scale-105"
                         />

@@ -5,7 +5,7 @@ const AboutHero = () => {
             {/* Background */}
             <div className="absolute inset-0">
                 <img
-                    src="../../../src/assets/images/hero/hero-1.png"
+                    src="/about/hero-1.png"
                     alt="SteelNova"
                     className="h-full w-full object-cover"
                 />

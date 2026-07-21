@@ -5,7 +5,7 @@ import {
     Factory,
 } from "lucide-react";
 
-import worldMap from "../../assets/images/about/world-map.png";
+import worldMap from "/about/world-map.png";
 
 const stats = [
     {

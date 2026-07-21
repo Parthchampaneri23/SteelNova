@@ -18,7 +18,7 @@ const CompanyOverview = () => {
                 <div className="overflow-hidden rounded-3xl shadow-2xl">
 
                     <img
-                        src="../../src/assets/images/about/about-company.png"
+                        src="/about/about-company.png"
                         alt="SteelNova"
                         className="h-full w-full object-cover hover:scale-105 transition duration-500"
                     />
