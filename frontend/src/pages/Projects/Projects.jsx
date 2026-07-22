@@ -1,10 +1,17 @@
+import ProjectHero from "../../components/projects/ProjectHero";
+import FeaturedProjects from "../../components/projects/FeaturedProjects";
+import ProjectStats from "../../components/projects/ProjectStats";
+import ProjectCTA from "../../components/projects/ProjectCTA";
+
+
 const Projects = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <h1 className="text-5xl font-bold text-slate-800">
-                Projects Page
-            </h1>
-        </div>
+        <>
+            <ProjectHero />
+            <FeaturedProjects />
+            <ProjectStats />
+            <ProjectCTA />
+        </>
     );
 };
 

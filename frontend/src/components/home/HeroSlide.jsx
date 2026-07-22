@@ -36,7 +36,7 @@ const HeroSlide = ({ slide }) => {
                         </Link>
 
                         <Link
-                            to="/contact"
+                            to="/contact#quote-form"
                             className="rounded-xl border-2 border-slate-300 px-8 py-4 font-semibold transition-all duration-300 hover:border-blue-600 hover:bg-blue-600 hover:text-white"
                         >
                             Get Quote

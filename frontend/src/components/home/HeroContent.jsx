@@ -31,7 +31,7 @@ const HeroContent = () => {
                 </Link>
 
                 <Link
-                    to="/contact"
+                    to="/contact#quote-form"
                     className="border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 px-7 py-4 rounded-xl font-semibold transition"
                 >
                     Get Quote

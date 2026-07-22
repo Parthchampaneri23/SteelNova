@@ -35,7 +35,7 @@ const Footer = () => {
                     </div>
 
                     <Link
-                        to="/contact"
+                        to="/contact#quote-form"
                         className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:bg-blue-700"
                     >
                         Get A Quote

@@ -32,7 +32,7 @@ const CTASection = () => {
                         <div className="mt-10 flex flex-wrap gap-5">
 
                             <Link
-                                to="/contact"
+                                to="/contact#quote-form"
                                 className="bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
                             >
                                 Request a Quote

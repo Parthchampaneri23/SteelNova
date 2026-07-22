@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
-const QuoteButton = () => {
+const QuoteButton = ({
+    text = "Request A Quote",
+    className = "",
+}) => {
     return (
         <Link
-            to="/contact"
-            className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg"
+            to="/contact#quote-form"
+            className={`inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-700 ${className}`}
         >
-            Get Quote
+            {text}
+            <ArrowRight size={20} />
         </Link>
     );
 };

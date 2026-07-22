@@ -1,10 +1,20 @@
+import IndustryHero from "../../components/industries/IndustryHero";
+import IndustryGrid from "../../components/industries/IndustryGrid";
+import IndustryBenefits from "../../components/industries/IndustryBenefits";
+import IndustryProcess from "../../components/industries/IndustryProcess";
+import IndustryCTA from "../../components/industries/IndustryCTA";
+import IndustryDetails from "../../components/industries/IndustryDetails";
+
 const Industries = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <h1 className="text-5xl font-bold text-slate-800">
-                Industries Page
-            </h1>
-        </div>
+        <>
+            <IndustryHero />
+            <IndustryGrid />
+            <IndustryBenefits />
+            <IndustryProcess />
+            <IndustryDetails />
+            <IndustryCTA />
+        </>
     );
 };
 

@@ -1,10 +1,21 @@
+import InfrastructureHero from "../../components/infrastructure/InfrastructureHero";
+import ManufacturingFacility from "../../components/infrastructure/ManufacturingFacility";
+import AdvancedMachinery from "../../components/infrastructure/AdvancedMachinery";
+import QualityControl from "../../components/infrastructure/QualityControl";
+import InfrastructureStats from "../../components/infrastructure/InfrastructureStats";
+import InfrastructureCTA from "../../components/infrastructure/InfrastructureCTA";
+
+
 const Infrastructure = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <h1 className="text-5xl font-bold text-slate-800">
-                Infrastructure Page
-            </h1>
-        </div>
+        <>
+            <InfrastructureHero />
+            <ManufacturingFacility />
+            <AdvancedMachinery />
+            <QualityControl />
+            <InfrastructureStats />
+            <InfrastructureCTA />
+        </>
     );
 };
 
