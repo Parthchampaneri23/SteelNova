@@ -4,14 +4,23 @@ import DownloadsSection from "../../components/resources/DownloadsSection";
 import CertificatesSection from "../../components/resources/CertificatesSection";
 import ResourcesCTA from "../../components/resources/ResourcesCTA";
 
-
 const Resources = () => {
     return (
         <>
             <ResourcesHero />
-            <BlogsSection />
-            <DownloadsSection />
-            <CertificatesSection />
+
+            <div id="blogs">
+                <BlogsSection />
+            </div>
+
+            <div id="downloads">
+                <DownloadsSection />
+            </div>
+
+            <div id="certificates">
+                <CertificatesSection />
+            </div>
+
             <ResourcesCTA />
         </>
     );

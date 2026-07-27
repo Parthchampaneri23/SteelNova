@@ -16,10 +16,10 @@ const TopBar = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <a href="https://www.google.com/maps/search/?api=1&query=GIDC%20Vapi%20Gujarat%20India" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <FaMapMarkerAlt className="text-blue-500 text-xs" />
-                    <span>Vapi, Gujarat, India</span>
-                </div>
+                    <span>GIDC, Vapi, Gujarat, India</span>
+                </a>
             </div>
         </div>
     );

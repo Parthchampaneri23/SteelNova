@@ -55,19 +55,15 @@ export const navigation = [
         dropdown: [
             {
                 title: "Blogs",
-                path: "/resources/blogs",
+                path: "/resources#blogs",
             },
             {
                 title: "Downloads",
-                path: "/resources/downloads",
+                path: "/resources#downloads",
             },
             {
                 title: "Certificates",
-                path: "/resources/certificates",
-            },
-            {
-                title: "FAQs",
-                path: "/resources/faqs",
+                path: "/resources#certificates",
             },
         ],
     },

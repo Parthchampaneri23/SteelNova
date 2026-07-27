@@ -163,10 +163,10 @@ const Footer = () => {
 
                     <div className="space-y-5 text-slate-400">
 
-                        <div className="flex gap-3">
-                            <MapPin className="text-blue-500 mt-1" size={20} />
-                            <span>Vapi, Gujarat, India</span>
-                        </div>
+<a href="https://www.google.com/maps/search/?api=1&query=GIDC%20Vapi%20Gujarat%20India" target="_blank" rel="noopener noreferrer" className="flex gap-3">
+    <MapPin className="text-blue-500 mt-1" size={20} />
+    <span>GIDC, Vapi, Gujarat, India</span>
+</a>
 
                         <div className="flex gap-3">
                             <Phone className="text-blue-500" size={20} />
