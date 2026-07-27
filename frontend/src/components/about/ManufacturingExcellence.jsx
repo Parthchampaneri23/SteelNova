@@ -34,7 +34,7 @@ const steps = [
 
 const ManufacturingExcellence = () => {
     return (
-        <section className="py-16 bg-white">
+        <section className="py-14 bg-white">
 
             <div className="max-w-7xl mx-auto px-4 lg:px-5">
 

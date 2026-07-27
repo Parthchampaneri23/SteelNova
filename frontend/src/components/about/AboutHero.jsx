@@ -15,7 +15,7 @@ const AboutHero = () => {
             {/* Content */}
             <div className="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
 
-                <span className="rounded-full border border-blue-400/50 bg-blue-500/20 px-6 py-2 text-sm font-semibold uppercase tracking-[0.3em]">
+                <span className="inline-block rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold uppercase tracking-wider">
                     About SteelNova
                 </span>
 

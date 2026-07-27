@@ -32,7 +32,7 @@ const FAQ = () => {
     };
 
     return (
-        <section className="bg-slate-50 py-16">
+        <section className="bg-slate-50 py-14">
 
             <div className="max-w-5xl mx-auto px-6">
 

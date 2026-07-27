@@ -6,7 +6,7 @@ import FloatingCard from "./FloatingCard";
 const HeroSlide = ({ slide }) => {
     return (
         <section className="min-h-[calc(100vh-80px)] bg-gradient-to-r from-slate-50 via-blue-50 to-slate-100 flex items-center overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 lg:px-5 py-16 lg:pt-8 lg:pb-0 flex flex-col-reverse lg:flex-row items-center gap-12">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 py-14 lg:pt-8 lg:pb-0 flex flex-col-reverse lg:flex-row items-center gap-12">
 
                 {/* Left Content */}
                 <motion.div

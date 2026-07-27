@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProjectCTA = () => {
     return (
-        <section className="bg-gradient-to-r from-blue-700 to-blue-600 py-16">
+        <section className="bg-gradient-to-r from-blue-700 to-blue-600 py-14">
 
             <div className="max-w-6xl mx-auto px-6 text-center text-white">
 

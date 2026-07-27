@@ -31,7 +31,7 @@ const CareerCTA = () => {
     return (
         <section
             id="apply"
-            className="bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950 py-16"
+            className="bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950 py-14"
         >
             <div className="max-w-7xl mx-auto px-4 lg:px-5">
 

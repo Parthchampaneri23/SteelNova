@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProductsCTA = () => {
     return (
-        <section className="bg-blue-600 py-16">
+        <section className="bg-blue-600 py-14">
 
             <div className="max-w-5xl mx-auto px-6 text-center text-white">
 
@@ -21,11 +21,11 @@ const ProductsCTA = () => {
                 </p>
 
                 <Link
-                  to="/contact#quote-form"
-                  className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-blue-600 transition hover:scale-105"
+                    to="/contact#quote-form"
+                    className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-blue-600 transition hover:scale-105"
                 >
-                  Request Quote
-                  <ArrowRight size={20} />
+                    Request Quote
+                    <ArrowRight size={20} />
                 </Link>
 
             </div>

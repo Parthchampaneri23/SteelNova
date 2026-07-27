@@ -6,7 +6,7 @@ const ProductsSection = () => {
     const categories = [...new Set(allProducts.map(product => product.category))];
 
     return (
-        <section className="bg-slate-50 py-16">
+        <section className="bg-slate-50 py-14">
 
             <div className="max-w-7xl mx-auto px-4 lg:px-5">
 

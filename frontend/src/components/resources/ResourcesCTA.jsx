@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const ResourcesCTA = () => {
     return (
-        <section className="bg-slate-900 py-16">
+        <section className="bg-slate-900 py-14">
 
             <div className="max-w-5xl mx-auto px-6 text-center text-white">
 

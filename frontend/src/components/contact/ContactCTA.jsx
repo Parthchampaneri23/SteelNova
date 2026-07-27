@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const ContactCTA = () => {
     return (
-        <section className="bg-blue-600 py-16">
+        <section className="bg-blue-600 py-14">
 
             <div className="max-w-5xl mx-auto px-6 text-center text-white">
 

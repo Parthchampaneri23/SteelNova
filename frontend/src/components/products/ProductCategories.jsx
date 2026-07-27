@@ -3,7 +3,7 @@ import { productCategories } from "../../data/productCategories";
 
 const ProductCategories = () => {
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-14">
 
             <div className="max-w-7xl mx-auto px-4 lg:px-5">
 

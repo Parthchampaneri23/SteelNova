@@ -10,7 +10,7 @@ const ProjectHero = () => {
 
             <div className="relative z-10 max-w-4xl px-6 text-center text-white">
 
-                <span className="rounded-full border border-blue-400 px-5 py-2 text-sm uppercase tracking-[0.3em]">
+                <span className="inline-block rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold uppercase tracking-wider">
                     Our Projects
                 </span>
 

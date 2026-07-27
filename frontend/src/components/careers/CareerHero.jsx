@@ -11,7 +11,7 @@ const CareerHero = () => {
             <div className="relative z-10 flex h-full items-center justify-center">
                 <div className="max-w-4xl px-6 text-center text-white">
 
-                    <span className="rounded-full bg-blue-600/20 border border-blue-400 px-6 py-2 text-sm font-semibold uppercase tracking-[0.3em]">
+                    <span className="inline-block rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold uppercase tracking-wider">
                         Careers
                     </span>
 

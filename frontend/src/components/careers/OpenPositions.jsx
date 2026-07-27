@@ -127,7 +127,7 @@ const positions = [
 
 const OpenPositions = () => {
     return (
-        <section id="positions" className="py-16 bg-white">
+        <section id="positions" className="py-14 bg-white">
 
             <div className="max-w-7xl mx-auto px-4 lg:px-5">
 

@@ -9,7 +9,7 @@ const contactInfo = [
     {
         icon: MapPin,
         title: "Our Location",
-        value: "Vapi, Gujarat 396195, India",
+        value: "GIDC,Vapi, Gujarat 396195, India",
     },
     {
         icon: Phone,
@@ -30,7 +30,7 @@ const contactInfo = [
 
 const ContactInfo = () => {
     return (
-        <section className="py-16 bg-white">
+        <section className="py-14 bg-white">
 
             <div className="max-w-7xl mx-auto px-4 lg:px-5">
 

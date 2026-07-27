@@ -86,7 +86,7 @@ const ContactForm = () => {
     return (
         <section
             id="quote-form"
-            className="bg-gradient-to-b from-slate-50 to-white py-16"
+            className="bg-gradient-to-b from-slate-50 to-white py-14"
         >
             <div className="max-w-7xl mx-auto px-4 lg:px-5">
 

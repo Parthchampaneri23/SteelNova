@@ -2,7 +2,7 @@ import { clients } from "../../data/clients";
 
 const ClientsSection = () => {
     return (
-        <section className="bg-white py-16 overflow-hidden">
+        <section className="bg-white py-14 overflow-hidden">
 
             <div className="max-w-7xl mx-auto px-4 lg:px-5 text-center">
 

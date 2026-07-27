@@ -12,7 +12,7 @@ const ResourcesHero = () => {
 
             <div className="relative z-10 max-w-4xl px-6 text-center">
 
-                <span className="uppercase tracking-[0.35em] text-blue-400 font-semibold">
+                <span className="inline-block rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold uppercase tracking-wider">
                     Resources
                 </span>
 

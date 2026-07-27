@@ -33,7 +33,7 @@ const timeline = [
 
 const OurStory = () => {
     return (
-        <section className="bg-slate-50 py-16">
+        <section className="bg-slate-50 py-14">
 
             <div className="max-w-6xl mx-auto px-6">
 

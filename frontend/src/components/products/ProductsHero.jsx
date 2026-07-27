@@ -10,7 +10,7 @@ const ProductsHero = () => {
 
             <div className="relative z-10 max-w-5xl px-6 text-center text-white">
 
-                <span className="uppercase tracking-[0.3em] text-blue-400 font-semibold">
+                <span className="inline-block rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold uppercase tracking-wider">
                     Our Products
                 </span>
 
