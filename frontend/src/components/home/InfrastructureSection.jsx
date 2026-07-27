@@ -4,7 +4,7 @@ const InfrastructureSection = () => {
     return (
         <section className="py-16 bg-white">
 
-            <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-center">
 
                 <img
                     src={infrastructureImage}

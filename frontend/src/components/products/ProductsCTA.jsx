@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProductsCTA = () => {
     return (
@@ -19,13 +20,13 @@ const ProductsCTA = () => {
                     products for your industrial applications.
                 </p>
 
-                <button className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-blue-600 transition hover:scale-105">
-
-                    Request Quote
-
-                    <ArrowRight size={20} />
-
-                </button>
+                <Link
+                  to="/contact#quote-form"
+                  className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-blue-600 transition hover:scale-105"
+                >
+                  Request Quote
+                  <ArrowRight size={20} />
+                </Link>
 
             </div>
 

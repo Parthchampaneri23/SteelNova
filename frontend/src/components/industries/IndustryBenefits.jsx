@@ -35,7 +35,7 @@ const benefits = [
 const IndustryBenefits = () => {
     return (
         <section className="py-16 bg-white">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5">
 
                 <div className="text-center mb-16">
                     <span className="uppercase tracking-[0.3em] text-blue-600 font-semibold">

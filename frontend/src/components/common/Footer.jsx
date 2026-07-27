@@ -1,3 +1,4 @@
+import { products } from "../../data/products";
 import { Link } from "react-router-dom";
 import {
     MapPin,
@@ -22,7 +23,7 @@ const Footer = () => {
 
             {/* Top CTA */}
             <div className="border-b border-slate-800">
-                <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div className="max-w-7xl mx-auto px-4 lg:px-5 py-8 flex flex-col lg:flex-row items-center justify-between gap-6">
 
                     <div>
                         <h2 className="text-3xl font-bold">
@@ -47,7 +48,7 @@ const Footer = () => {
 
             {/* Main Footer */}
 
-            <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-14">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-14">
 
                 {/* Company */}
 
@@ -123,20 +124,30 @@ const Footer = () => {
 
                 {/* Products */}
 
+
+
                 <div>
 
                     <h3 className="mb-6 text-2xl font-bold">
                         Our Products
                     </h3>
 
-                    <ul className="space-y-4 text-slate-400">
+                    <ul className="space-y-4">
 
-                        <li>Industrial Pumps</li>
-                        <li>Industrial Valves</li>
-                        <li>Heat Exchangers</li>
-                        <li>Pressure Vessels</li>
-                        <li>Storage Tanks</li>
-                        <li>Process Equipment</li>
+                        {products.map((product) => (
+
+                            <li key={product.id}>
+
+                                <Link
+                                    to={`/products/${product.slug}`}
+                                    className="text-slate-400 hover:text-blue-400 transition"
+                                >
+                                    {product.title}
+                                </Link>
+
+                            </li>
+
+                        ))}
 
                     </ul>
 
@@ -182,7 +193,7 @@ const Footer = () => {
 
             <div className="border-t border-slate-800">
 
-                <div className="max-w-7xl mx-auto px-6 py-8 flex flex-wrap justify-center gap-8 text-slate-300">
+                <div className="max-w-7xl mx-auto px-4 lg:px-5 py-8 flex flex-wrap justify-center gap-8 text-slate-300">
 
                     <span>✔ ISO 9001 Certified</span>
                     <span>✔ CE Standards</span>
@@ -197,7 +208,7 @@ const Footer = () => {
 
             <div className="border-t border-slate-800">
 
-                <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+                <div className="max-w-7xl mx-auto px-4 lg:px-5 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
 
                     <p>© 2026 SteelNova Industries. All Rights Reserved.</p>
 

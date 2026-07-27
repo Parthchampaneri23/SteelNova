@@ -7,7 +7,7 @@ const CTASection = () => {
     return (
         <section className="py-16 bg-slate-50">
 
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5">
 
                 <div className="grid lg:grid-cols-2 gap-16 items-center rounded-[40px] overflow-hidden bg-gradient-to-r from-blue-700 to-blue-900 shadow-2xl">
 

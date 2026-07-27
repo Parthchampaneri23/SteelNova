@@ -8,6 +8,7 @@ import process from "../assets/images/products/process-equipment.jpg";
 export const products = [
     {
         id: 1,
+        slug: "#industrial-pumps",
         title: "Industrial Pumps",
         image: pump,
         description:
@@ -15,6 +16,7 @@ export const products = [
     },
     {
         id: 2,
+        slug: "#industrial-valves",
         title: "Industrial Valves",
         image: valve,
         description:
@@ -22,6 +24,7 @@ export const products = [
     },
     {
         id: 3,
+        slug: "#heat-exchangers",
         title: "Heat Exchangers",
         image: exchanger,
         description:
@@ -29,6 +32,7 @@ export const products = [
     },
     {
         id: 4,
+        slug: "#pressure-vessels",
         title: "Pressure Vessels",
         image: vessel,
         description:
@@ -36,6 +40,7 @@ export const products = [
     },
     {
         id: 5,
+        slug: "#storage-tanks",
         title: "Storage Tanks",
         image: tank,
         description:
@@ -43,7 +48,8 @@ export const products = [
     },
     {
         id: 6,
-        title: "Process Equipment",
+        slug: "#custom-fabrication",
+        title: "Custom Fabrication",
         image: process,
         description:
             "Custom-engineered equipment for industrial manufacturing processes.",

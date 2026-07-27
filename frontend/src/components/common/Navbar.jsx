@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 import Logo from "./Logo";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
-import SearchButton from "./SearchButton";
+
 import QuoteButton from "./QuoteButton";
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
                     <DesktopMenu />
 
                     <div className="hidden lg:flex items-center gap-3">
-                        <SearchButton />
+
                         <QuoteButton />
                     </div>
 

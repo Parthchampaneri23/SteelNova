@@ -5,7 +5,7 @@ const IndustryCTA = () => {
     return (
         <section className="py-16">
 
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5">
 
                 <div className="overflow-hidden rounded-[40px] bg-gradient-to-r from-blue-700 to-blue-500 px-10 py-20 text-center text-white shadow-2xl">
 

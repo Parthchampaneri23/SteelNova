@@ -32,7 +32,7 @@ const InfrastructureStats = () => {
     return (
         <section className="bg-slate-900 py-16">
 
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5">
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 

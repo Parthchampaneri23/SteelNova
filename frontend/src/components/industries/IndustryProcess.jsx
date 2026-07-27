@@ -33,7 +33,7 @@ const IndustryProcess = () => {
     return (
         <section className="bg-slate-50 py-16">
 
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5">
 
                 <div className="text-center mb-20">
 

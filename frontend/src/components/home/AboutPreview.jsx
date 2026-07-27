@@ -5,7 +5,7 @@ import aboutImage from "../../assets/images/about/about-company.png";
 const AboutPreview = () => {
     return (
         <section className="bg-slate-50 py-16">
-            <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-center">
 
                 {/* Left Image */}
                 <div className="relative">

@@ -1,10 +1,19 @@
+import ResourcesHero from "../../components/resources/ResourcesHero";
+import BlogsSection from "../../components/resources/BlogsSection";
+import DownloadsSection from "../../components/resources/DownloadsSection";
+import CertificatesSection from "../../components/resources/CertificatesSection";
+import ResourcesCTA from "../../components/resources/ResourcesCTA";
+
+
 const Resources = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <h1 className="text-5xl font-bold text-slate-800">
-                Resources Page
-            </h1>
-        </div>
+        <>
+            <ResourcesHero />
+            <BlogsSection />
+            <DownloadsSection />
+            <CertificatesSection />
+            <ResourcesCTA />
+        </>
     );
 };
 

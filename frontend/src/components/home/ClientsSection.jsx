@@ -4,7 +4,7 @@ const ClientsSection = () => {
     return (
         <section className="bg-white py-16 overflow-hidden">
 
-            <div className="max-w-7xl mx-auto px-6 text-center">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 text-center">
 
                 <span className="uppercase tracking-[0.3em] text-blue-600 font-semibold">
                     Trusted By Industry Leaders

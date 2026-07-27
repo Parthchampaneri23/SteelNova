@@ -29,7 +29,7 @@ const ProductDetails = () => {
 
     return (
         <section className="bg-slate-50 py-16">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5">
 
                 <Link
                     to="/products"
@@ -97,10 +97,13 @@ const ProductDetails = () => {
                             </p>
                         </div>
 
-                        <button className="mt-10 inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white hover:bg-blue-700 transition">
+                        <Link
+                            to="/contact#quote-form"
+                            className="mt-10 inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
+                        >
                             Request Quote
                             <ArrowRight size={20} />
-                        </button>
+                        </Link>
 
                     </div>
 
