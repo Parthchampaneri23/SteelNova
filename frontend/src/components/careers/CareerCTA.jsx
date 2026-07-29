@@ -1,31 +1,115 @@
 import { useState } from "react";
+import axios from "axios";
 import { X } from "lucide-react";
 
 const CareerCTA = () => {
     const [showThankYou, setShowThankYou] = useState(false);
+    const [loading, setLoading] = useState(false);
+
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        position: '',
+        name: "",
+        email: "",
+        phone: "",
+        position: "",
         file: null,
-        message: '',
+        message: "",
     });
+
     const [errors, setErrors] = useState({});
-    const handleSubmit = (e) => {
-        e.preventDefault();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+
+        if (errors[name]) {
+            setErrors((prev) => ({
+                ...prev,
+                [name]: "",
+            }));
+        }
+    };
+
+    const validate = () => {
         const newErrors = {};
-        if (!formData.name.trim()) newErrors.name = 'Full Name is required';
-        if (!formData.email.trim()) newErrors.email = 'Email is required';
-        else if (!/^\w[\w.-]*@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) newErrors.email = 'Invalid email';
-        if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-        else if (!/^\+?[0-9]{7,15}$/.test(formData.phone)) newErrors.phone = 'Invalid phone number';
-        if (!formData.position) newErrors.position = 'Please select a position';
-        if (!formData.file) newErrors.file = 'Please upload your resume';
-        if (!formData.message.trim()) newErrors.message = 'Message is required';
+
+        if (!formData.name.trim())
+            newErrors.name = "Full Name is required";
+
+        if (!formData.email.trim())
+            newErrors.email = "Email is required";
+        else if (
+            !/^\w[\w.-]*@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)
+        )
+            newErrors.email = "Invalid email";
+
+        if (!formData.phone.trim())
+            newErrors.phone = "Phone number is required";
+        else if (!/^\+?[0-9]{7,15}$/.test(formData.phone))
+            newErrors.phone = "Invalid phone number";
+
+        if (!formData.position)
+            newErrors.position = "Please select a position";
+
+        // Resume required only for UI
+        if (!formData.file)
+            newErrors.file = "Please upload your resume";
+
+        if (!formData.message.trim())
+            newErrors.message = "Message is required";
+
         setErrors(newErrors);
-        if (Object.keys(newErrors).length === 0) {
-            setShowThankYou(true);
+
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!validate()) return;
+
+        try {
+            setLoading(true);
+
+            const response = await axios.post(
+                "http://localhost:5000/api/careers",
+                {
+                    fullName: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    position: formData.position,
+                    experience: formData.message,
+                }
+            );
+
+            if (response.data.success) {
+                setShowThankYou(true);
+
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    position: "",
+                    file: null,
+                    message: "",
+                });
+
+                setErrors({});
+            }
+
+        } catch (error) {
+            console.error(error);
+
+            alert(
+                error.response?.data?.message ||
+                "Failed to submit application."
+            );
+
+        } finally {
+            setLoading(false);
         }
     };
     return (
@@ -59,35 +143,39 @@ const CareerCTA = () => {
 
                         <input
                             type="text"
+                            name="name"
                             placeholder="Full Name"
                             className="rounded-xl border border-slate-300 p-4 outline-none focus:border-blue-600"
                             value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            onChange={handleChange}
                         />
                         {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
 
                         <input
                             type="email"
+                            name="email"
                             placeholder="Email Address"
                             className="rounded-xl border border-slate-300 p-4 outline-none focus:border-blue-600"
                             value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            onChange={handleChange}
                         />
                         {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
 
                         <input
                             type="tel"
+                            name="phone"
                             placeholder="Phone Number"
                             className="rounded-xl border border-slate-300 p-4 outline-none focus:border-blue-600"
                             value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            onChange={handleChange}
                         />
                         {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
 
                         <select
+                            name="position"
                             className="rounded-xl border border-slate-300 p-4 outline-none focus:border-blue-600"
                             value={formData.position}
-                            onChange={(e) => setFormData({ ...formData, position: e.target.value })}
+                            onChange={handleChange}
                         >
                             <option value="">Select Position</option>
                             <option>Mechanical Engineer</option>
@@ -114,11 +202,12 @@ const CareerCTA = () => {
 
                             <textarea
                                 rows="5"
+                                name="message"
                                 placeholder="Tell us about yourself..."
                                 className="w-full rounded-xl border border-slate-300 p-4 outline-none focus:border-blue-600"
                                 value={formData.message}
-                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                            ></textarea>
+                                onChange={handleChange}
+                            />
                             {errors.message && <p className="text-red-600 text-sm mt-1">{errors.message}</p>}
 
                         </div>
@@ -127,9 +216,10 @@ const CareerCTA = () => {
 
                             <button
                                 type="submit"
-                                className="w-full rounded-xl bg-blue-600 py-4 text-lg font-semibold text-white transition hover:bg-blue-700"
+                                disabled={loading}
+                                className="w-full rounded-xl bg-blue-600 py-4 text-lg font-semibold text-white transition hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed"
                             >
-                                Submit Application
+                                {loading ? "Submitting..." : "Submit Application"}
                             </button>
 
                         </div>
