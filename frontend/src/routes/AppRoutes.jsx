@@ -14,6 +14,13 @@ import Careers from "../pages/Careers/Careers";
 import Contact from "../pages/Contact/Contact";
 import NotFound from "../pages/NotFound/NotFound";
 
+// Admin Pages
+import Login from "../pages/admin/Login";
+import Dashboard from "../pages/admin/Dashboard";
+import Contacts from "../pages/admin/Contacts";
+import CareersAdmin from "../pages/admin/Careers";
+
+
 import ScrollToTop from "../components/common/ScrollToTop";
 
 const AppRoutes = () => {
@@ -32,6 +39,13 @@ const AppRoutes = () => {
                     <Route path="/resources" element={<Resources />} />
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/contact" element={<Contact />} />
+
+                    {/* Admin Panel */}
+                    <Route path="/admin/login" element={<Login />} />
+                    <Route path="/admin/dashboard" element={<Dashboard />} />
+                    <Route path="/admin/contacts" element={<Contacts />} />
+                    <Route path="/admin/careers" element={<CareersAdmin />} />
+
                 </Route>
 
                 <Route path="*" element={<NotFound />} />
