@@ -8,6 +8,7 @@ import manufacturing from "../assets/images/industries/manufacturing.jpg";
 export const industries = [
     {
         id: 1,
+        slug: "oil-gas",
         title: "Oil & Gas",
         image: oilGas,
         description:
@@ -15,13 +16,15 @@ export const industries = [
     },
     {
         id: 2,
-        title: "Chemical",
+        slug: "chemical-processing",
+        title: "Chemical Processing",
         image: chemical,
         description:
             "Corrosion-resistant process equipment for chemical manufacturing plants.",
     },
     {
         id: 3,
+        slug: "water-treatment",
         title: "Water Treatment",
         image: waterTreatment,
         description:
@@ -29,6 +32,7 @@ export const industries = [
     },
     {
         id: 4,
+        slug: "power-plants",
         title: "Power Plants",
         image: powerPlants,
         description:
@@ -36,16 +40,18 @@ export const industries = [
     },
     {
         id: 5,
-        title: "Food Processing",
+        slug: "food-beverage",
+        title: "Food & Beverage",
         image: foodProcessing,
         description:
             "Hygienic stainless-steel equipment for food and beverage industries.",
     },
     {
         id: 6,
-        title: "Manufacturing",
+        slug: "pharmaceutical",
+        title: "Pharmaceutical",
         image: manufacturing,
         description:
-            "Complete industrial solutions for modern manufacturing facilities.",
+            "Precision engineered equipment meeting pharmaceutical quality standards.",
     },
 ];

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { projects } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 
@@ -24,6 +26,13 @@ const FeaturedProjects = () => {
                     {projects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
+                </div>
+
+                <div className="mt-12 text-center">
+                    <Link to="/projects" className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700">
+                        View All Projects
+                        <ArrowRight size={18} />
+                    </Link>
                 </div>
 
             </div>

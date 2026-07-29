@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const IndustryCard = ({ industry }) => {
+    const hash = industry.slug || industry.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
     return (
         <div className="group overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
 
@@ -16,9 +19,9 @@ const IndustryCard = ({ industry }) => {
                 {/* Overlay */}
                 <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent pb-8 opacity-0 transition-all duration-500 group-hover:opacity-100">
 
-                    <button className="translate-y-8 rounded-xl bg-white px-6 py-3 font-semibold text-blue-700 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                    <Link to={`/industries#${hash}`} className="translate-y-8 rounded-xl bg-white px-6 py-3 font-semibold text-blue-700 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                         Explore Industry
-                    </button>
+                    </Link>
 
                 </div>
 
@@ -35,10 +38,10 @@ const IndustryCard = ({ industry }) => {
                     {industry.description}
                 </p>
 
-                <button className="mt-6 flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4">
+                <Link to={`/industries#${hash}`} className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4">
                     Learn More
                     <ArrowRight size={18} />
-                </button>
+                </Link>
 
             </div>
 

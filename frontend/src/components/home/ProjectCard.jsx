@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const ProjectCard = ({ project }) => {
@@ -24,10 +25,10 @@ const ProjectCard = ({ project }) => {
                     {project.description}
                 </p>
 
-                <button className="mt-6 flex items-center gap-2 font-semibold text-blue-600">
+                <Link to="/projects" className="mt-6 flex items-center gap-2 font-semibold text-blue-600">
                     View Project
                     <ArrowRight size={18} />
-                </button>
+                </Link>
 
             </div>
 

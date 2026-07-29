@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const ProductCard = ({ product }) => {
@@ -16,9 +17,9 @@ const ProductCard = ({ product }) => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100 flex items-end justify-center pb-8">
 
-                    <button className="translate-y-8 rounded-xl bg-white px-6 py-3 font-semibold text-blue-700 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                    <Link to={"/products" + (product.slug || "")} className="translate-y-8 rounded-xl bg-white px-6 py-3 font-semibold text-blue-700 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                         View Product
-                    </button>
+                    </Link>
 
                 </div>
 
@@ -35,10 +36,10 @@ const ProductCard = ({ product }) => {
                     {product.description}
                 </p>
 
-                <button className="mt-6 flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4">
+                <Link to={"/products" + (product.slug || "")} className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4">
                     Learn More
                     <ArrowRight size={18} />
-                </button>
+                </Link>
 
             </div>
 
