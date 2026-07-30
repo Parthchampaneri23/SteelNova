@@ -1,4 +1,14 @@
+import { LogOut } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 const Topbar = () => {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem("adminToken");
+        navigate("/admin/login");
+    };
+
     return (
         <header className="bg-white shadow-sm px-8 py-5 flex items-center justify-between">
 
@@ -6,8 +16,20 @@ const Topbar = () => {
                 SteelNova Admin
             </h1>
 
-            <div className="text-slate-500">
-                Welcome, Admin
+            <div className="flex items-center gap-5">
+
+                <span className="text-slate-600 font-medium">
+                    Welcome, Admin
+                </span>
+
+                <button
+                    onClick={handleLogout}
+                    className="flex items-center gap-2 rounded-lg bg-red-500 px-4 py-2 text-white transition hover:bg-red-600"
+                >
+                    <LogOut size={18} />
+                    Logout
+                </button>
+
             </div>
 
         </header>

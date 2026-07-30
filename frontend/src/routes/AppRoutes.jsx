@@ -20,6 +20,8 @@ import Dashboard from "../pages/admin/Dashboard";
 import Contacts from "../pages/admin/Contacts";
 import CareersAdmin from "../pages/admin/Careers";
 
+import ProtectedRoute from "../components/admin/ProtectedRoute";
+
 
 import ScrollToTop from "../components/common/ScrollToTop";
 
@@ -45,6 +47,13 @@ const AppRoutes = () => {
                     <Route path="/admin/dashboard" element={<Dashboard />} />
                     <Route path="/admin/contacts" element={<Contacts />} />
                     <Route path="/admin/careers" element={<CareersAdmin />} />
+
+                    {/* Protected Admin Routes */}
+                    <Route element={<ProtectedRoute />}>
+                        <Route path="/admin/dashboard" element={<Dashboard />} />
+                        <Route path="/admin/contacts" element={<Contacts />} />
+                        <Route path="/admin/careers" element={<CareersAdmin />} />
+                    </Route>
 
                 </Route>
 
