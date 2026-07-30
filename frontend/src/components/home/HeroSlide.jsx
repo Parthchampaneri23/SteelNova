@@ -5,8 +5,8 @@ import FloatingCard from "./FloatingCard";
 
 const HeroSlide = ({ slide }) => {
     return (
-        <section className="min-h-[calc(100vh-80px)] bg-gradient-to-r from-slate-50 via-blue-50 to-slate-100 flex items-center overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 lg:px-5 py-14 lg:pt-8 lg:pb-0 flex flex-col-reverse lg:flex-row items-center gap-12">
+        <section className="min-h-[calc(100vh-120px)] bg-gradient-to-r from-slate-50 via-blue-50 to-slate-100 flex items-center overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 pt-3 pb-0 flex flex-col-reverse lg:flex-row items-center gap-12">
 
                 {/* Left Content */}
                 <motion.div
@@ -41,30 +41,6 @@ const HeroSlide = ({ slide }) => {
                         >
                             Get Quote
                         </Link>
-                    </div>
-
-                    {/* Trust Points */}
-                    <div className="mt-10 space-y-4">
-                        <div className="flex items-center gap-3">
-                            <CheckCircle className="text-blue-600" size={20} />
-                            <span className="text-slate-700">
-                                ISO 9001 Certified Manufacturing
-                            </span>
-                        </div>
-
-                        <div className="flex items-center gap-3">
-                            <CheckCircle className="text-blue-600" size={20} />
-                            <span className="text-slate-700">
-                                Advanced Manufacturing Technology
-                            </span>
-                        </div>
-
-                        <div className="flex items-center gap-3">
-                            <CheckCircle className="text-blue-600" size={20} />
-                            <span className="text-slate-700">
-                                Trusted by Industries Worldwide
-                            </span>
-                        </div>
                     </div>
                 </motion.div>
 
