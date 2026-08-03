@@ -12,6 +12,9 @@ import Projects from "../pages/Projects/Projects";
 import Resources from "../pages/Resources/Resources";
 import Careers from "../pages/Careers/Careers";
 import Contact from "../pages/Contact/Contact";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsConditions from "../pages/TermsConditions";
+import Sitemap from "../pages/Sitemap";
 import NotFound from "../pages/NotFound/NotFound";
 
 // Admin Pages
@@ -21,16 +24,18 @@ import Contacts from "../pages/admin/Contacts";
 import CareersAdmin from "../pages/admin/Careers";
 
 import ProtectedRoute from "../components/admin/ProtectedRoute";
-
-
 import ScrollToTop from "../components/common/ScrollToTop";
 
 const AppRoutes = () => {
     return (
         <BrowserRouter>
             <ScrollToTop />
+
             <Routes>
+
                 <Route element={<MainLayout />}>
+
+                    {/* Website Pages */}
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/products" element={<Products />} />
@@ -42,23 +47,41 @@ const AppRoutes = () => {
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/contact" element={<Contact />} />
 
-                    {/* Admin Panel */}
+                    {/* Footer Pages */}
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/terms-conditions" element={<TermsConditions />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+
+                    {/* Admin Login */}
                     <Route path="/admin/login" element={<Login />} />
-                    <Route path="/admin/dashboard" element={<Dashboard />} />
-                    <Route path="/admin/contacts" element={<Contacts />} />
-                    <Route path="/admin/careers" element={<CareersAdmin />} />
 
                     {/* Protected Admin Routes */}
                     <Route element={<ProtectedRoute />}>
-                        <Route path="/admin/dashboard" element={<Dashboard />} />
-                        <Route path="/admin/contacts" element={<Contacts />} />
-                        <Route path="/admin/careers" element={<CareersAdmin />} />
+
+                        <Route
+                            path="/admin/dashboard"
+                            element={<Dashboard />}
+                        />
+
+                        <Route
+                            path="/admin/contacts"
+                            element={<Contacts />}
+                        />
+
+                        <Route
+                            path="/admin/careers"
+                            element={<CareersAdmin />}
+                        />
+
                     </Route>
 
                 </Route>
 
+                {/* 404 */}
                 <Route path="*" element={<NotFound />} />
+
             </Routes>
+
         </BrowserRouter>
     );
 };

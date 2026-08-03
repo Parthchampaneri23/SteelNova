@@ -124,8 +124,6 @@ const Footer = () => {
 
                 {/* Products */}
 
-
-
                 <div>
 
                     <h3 className="mb-6 text-2xl font-bold">
@@ -163,7 +161,12 @@ const Footer = () => {
 
                     <div className="space-y-5 text-slate-400">
 
-                        <a href="https://www.google.com/maps/search/?api=1&query=GIDC%20Vapi%20Gujarat%20India" target="_blank" rel="noopener noreferrer" className="flex gap-3">
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=GIDC%20Vapi%20Gujarat%20India"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex gap-3"
+                        >
                             <MapPin className="text-blue-500 mt-1" size={20} />
                             <span>GIDC, Vapi, Gujarat, India</span>
                         </a>
@@ -210,19 +213,30 @@ const Footer = () => {
 
                 <div className="max-w-7xl mx-auto px-4 lg:px-5 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
 
-                    <p>© 2026 SteelNova Industries. All Rights Reserved.</p>
+                    <p>
+                        © {new Date().getFullYear()} SteelNova Industries. All Rights Reserved.
+                    </p>
 
                     <div className="flex gap-6">
 
-                        <Link to="/privacy-policy" className="hover:text-blue-400 transition">
+                        <Link
+                            to="/privacy-policy"
+                            className="hover:text-blue-400 transition"
+                        >
                             Privacy Policy
                         </Link>
 
-                        <Link to="/terms" className="hover:text-blue-400 transition">
+                        <Link
+                            to="/terms-conditions"
+                            className="hover:text-blue-400 transition"
+                        >
                             Terms & Conditions
                         </Link>
 
-                        <Link to="/sitemap" className="hover:text-blue-400 transition">
+                        <Link
+                            to="/sitemap"
+                            className="hover:text-blue-400 transition"
+                        >
                             Sitemap
                         </Link>
 
