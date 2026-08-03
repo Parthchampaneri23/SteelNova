@@ -12,24 +12,32 @@ const downloads = [
         title: "Company Profile",
         description: "Know more about SteelNova Industries and our engineering capabilities.",
         icon: <FileText size={42} />,
+        file: "/documents/SteelNova_Company_Profile.pdf",
+        filename: "SteelNova_Company_Profile.pdf",
     },
     {
         id: 2,
         title: "Product Catalogue",
         description: "Complete catalogue of pumps, valves, vessels and fabrication solutions.",
         icon: <BookOpen size={42} />,
+        file: "/documents/SteelNova_Product_Catalogue.pdf",
+        filename: "SteelNova_Product_Catalogue.pdf",
     },
     {
         id: 3,
         title: "Technical Brochure",
         description: "Detailed product specifications and engineering documentation.",
         icon: <FileBadge size={42} />,
+        file: "/documents/SteelNova_Technical_Brochure.pdf",
+        filename: "SteelNova_Technical_Brochure.pdf",
     },
     {
         id: 4,
         title: "Safety Guidelines",
         description: "Industrial safety standards and equipment handling procedures.",
         icon: <ShieldCheck size={42} />,
+        file: "/documents/SteelNova_Safety_Guidelines.pdf",
+        filename: "SteelNova_Safety_Guidelines.pdf",
     },
 ];
 
@@ -76,12 +84,16 @@ const DownloadsSection = () => {
                                 {item.description}
                             </p>
 
-                            <button
-                                className="mt-8 flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 hover:gap-3"
+                            <a
+                                href={item.file}
+                                download={item.filename}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 hover:gap-3"
                             >
                                 <Download size={18} />
                                 Download PDF
-                            </button>
+                            </a>
 
                         </div>
 
