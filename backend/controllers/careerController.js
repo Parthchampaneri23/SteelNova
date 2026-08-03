@@ -25,16 +25,21 @@ export const applyCareer = async (req, res) => {
         });
 
     } catch (error) {
+
         console.error(error);
 
         res.status(500).json({
             success: false,
             message: error.message,
         });
+
     }
 };
+
 export const getCareers = async (req, res) => {
+
     try {
+
         const careers = await Career.find().sort({ createdAt: -1 });
 
         res.status(200).json({
@@ -44,21 +49,70 @@ export const getCareers = async (req, res) => {
         });
 
     } catch (error) {
+
         res.status(500).json({
             success: false,
             message: error.message,
         });
+
     }
+
 };
-export const deleteCareer = async (req, res) => {
+
+export const updateCareerStatus = async (req, res) => {
+
     try {
-        const career = await Career.findByIdAndDelete(req.params.id);
+
+        const { status } = req.body;
+
+        const career = await Career.findByIdAndUpdate(
+            req.params.id,
+            { status },
+            {
+                new: true,
+                runValidators: true,
+            }
+        );
 
         if (!career) {
+
             return res.status(404).json({
                 success: false,
                 message: "Application not found",
             });
+
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Status updated successfully.",
+            data: career,
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: error.message,
+        });
+
+    }
+
+};
+
+export const deleteCareer = async (req, res) => {
+
+    try {
+
+        const career = await Career.findByIdAndDelete(req.params.id);
+
+        if (!career) {
+
+            return res.status(404).json({
+                success: false,
+                message: "Application not found",
+            });
+
         }
 
         res.status(200).json({
@@ -67,9 +121,12 @@ export const deleteCareer = async (req, res) => {
         });
 
     } catch (error) {
+
         res.status(500).json({
             success: false,
             message: error.message,
         });
+
     }
+
 };

@@ -30,6 +30,27 @@ const Contacts = () => {
 
     };
 
+    // Update Status
+    const updateContactStatus = async (id, status) => {
+
+        try {
+
+            await axios.put(
+                `http://localhost:5000/api/contact/${id}/status`,
+                { status }
+            );
+
+            fetchContacts();
+
+        } catch (error) {
+
+            console.log(error);
+
+        }
+
+    };
+
+    // Delete Contact
     const deleteContact = async (id) => {
 
         if (!window.confirm("Delete this enquiry?")) return;
@@ -61,6 +82,7 @@ const Contacts = () => {
             <ContactTable
                 contacts={contacts}
                 onDelete={deleteContact}
+                onStatusChange={updateContactStatus}
             />
 
         </AdminLayout>

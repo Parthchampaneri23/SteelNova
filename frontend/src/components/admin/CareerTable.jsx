@@ -1,6 +1,48 @@
 import { Trash2 } from "lucide-react";
+import { useState, useEffect } from "react";
 
-const CareerTable = ({ careers, onDelete }) => {
+const CareerTable = ({ careers, onDelete, onStatusChange }) => {
+
+    const [statusMap, setStatusMap] = useState({});
+
+    useEffect(() => {
+        const initialStatus = {};
+
+        careers.forEach((career) => {
+            initialStatus[career._id] = career.status || "Pending";
+        });
+
+        setStatusMap(initialStatus);
+    }, [careers]);
+
+    const handleStatusChange = (id, status) => {
+
+        setStatusMap((prev) => ({
+            ...prev,
+            [id]: status,
+        }));
+
+        onStatusChange(id, status);
+
+    };
+
+    const getStatusColor = (status) => {
+        switch (status) {
+            case "Pending":
+                return "bg-yellow-100 text-yellow-700";
+            case "Shortlisted":
+                return "bg-blue-100 text-blue-700";
+            case "Interview":
+                return "bg-purple-100 text-purple-700";
+            case "Selected":
+                return "bg-green-100 text-green-700";
+            case "Rejected":
+                return "bg-red-100 text-red-700";
+            default:
+                return "bg-slate-100 text-slate-700";
+        }
+    };
+
     return (
         <div className="overflow-x-auto rounded-2xl bg-white shadow">
 
@@ -51,9 +93,21 @@ const CareerTable = ({ careers, onDelete }) => {
                                 </td>
 
                                 <td className="px-6 py-4">
-                                    <span className="rounded-full bg-yellow-100 px-3 py-1 text-xs font-semibold text-yellow-700">
-                                        {career.status}
-                                    </span>
+                                    <select
+                                        value={statusMap[career._id] || "Pending"}
+                                        onChange={(e) =>
+                                            handleStatusChange(career._id, e.target.value)
+                                        }
+                                        className={`rounded-full px-3 py-2 text-xs font-semibold border outline-none ${getStatusColor(
+                                            statusMap[career._id]
+                                        )}`}
+                                    >
+                                        <option value="Pending">Pending</option>
+                                        <option value="Shortlisted">Shortlisted</option>
+                                        <option value="Interview">Interview</option>
+                                        <option value="Selected">Selected</option>
+                                        <option value="Rejected">Rejected</option>
+                                    </select>
                                 </td>
 
                                 <td className="px-6 py-4 text-center">

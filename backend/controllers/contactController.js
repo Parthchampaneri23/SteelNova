@@ -1,7 +1,9 @@
 import Contact from "../models/Contact.js";
 
 export const createContact = async (req, res) => {
+
     try {
+
         const contact = await Contact.create(req.body);
 
         res.status(201).json({
@@ -9,16 +11,22 @@ export const createContact = async (req, res) => {
             message: "Contact submitted successfully.",
             data: contact,
         });
+
     } catch (error) {
+
         res.status(500).json({
             success: false,
             message: error.message,
         });
+
     }
+
 };
 
 export const getContacts = async (req, res) => {
+
     try {
+
         const contacts = await Contact.find().sort({ createdAt: -1 });
 
         res.status(200).json({
@@ -26,23 +34,73 @@ export const getContacts = async (req, res) => {
             count: contacts.length,
             data: contacts,
         });
+
     } catch (error) {
+
         res.status(500).json({
             success: false,
             message: error.message,
         });
+
     }
+
 };
 
-export const deleteContact = async (req, res) => {
+// UPDATE CONTACT STATUS
+export const updateContactStatus = async (req, res) => {
+
     try {
-        const contact = await Contact.findByIdAndDelete(req.params.id);
+
+        const { status } = req.body;
+
+        const contact = await Contact.findByIdAndUpdate(
+            req.params.id,
+            { status },
+            {
+                new: true,
+                runValidators: true,
+            }
+        );
 
         if (!contact) {
+
             return res.status(404).json({
                 success: false,
                 message: "Contact not found",
             });
+
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Status updated successfully.",
+            data: contact,
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: error.message,
+        });
+
+    }
+
+};
+
+export const deleteContact = async (req, res) => {
+
+    try {
+
+        const contact = await Contact.findByIdAndDelete(req.params.id);
+
+        if (!contact) {
+
+            return res.status(404).json({
+                success: false,
+                message: "Contact not found",
+            });
+
         }
 
         res.status(200).json({
@@ -51,9 +109,12 @@ export const deleteContact = async (req, res) => {
         });
 
     } catch (error) {
+
         res.status(500).json({
             success: false,
             message: error.message,
         });
+
     }
+
 };

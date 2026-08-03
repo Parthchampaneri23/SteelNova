@@ -30,6 +30,27 @@ const Careers = () => {
 
     };
 
+    // Update Status
+    const updateCareerStatus = async (id, status) => {
+
+        try {
+
+            await axios.put(
+                `http://localhost:5000/api/careers/${id}/status`,
+                { status }
+            );
+
+            fetchCareers();
+
+        } catch (error) {
+
+            console.log(error);
+
+        }
+
+    };
+
+    // Delete Career
     const deleteCareer = async (id) => {
 
         if (!window.confirm("Delete this application?")) return;
@@ -61,6 +82,7 @@ const Careers = () => {
             <CareerTable
                 careers={careers}
                 onDelete={deleteCareer}
+                onStatusChange={updateCareerStatus}
             />
 
         </AdminLayout>
