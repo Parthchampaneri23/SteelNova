@@ -1,4 +1,4 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroContent = () => {
@@ -36,6 +36,17 @@ const HeroContent = () => {
                 >
                     Get Quote
                 </Link>
+
+                <a
+                    href="/catlogue/steelnovacatalogue.pdf"
+                    download="SteelNova_Catalogue.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-7 py-4 rounded-xl font-semibold transition"
+                >
+                    <Download size={18} />
+                    Download Catalogue
+                </a>
 
             </div>
 
