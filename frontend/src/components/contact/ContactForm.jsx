@@ -1,9 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
-import { Building2, Mail, Phone, User, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Building2, Mail, Phone, User, ArrowRight, CheckCircle2, Package } from "lucide-react";
+import { allProducts } from "../../data/allProducts";
 
 const ContactForm = () => {
-    const [formData, setFormData] = useState({ name: "", company: "", email: "", phone: "", subject: "", message: "" });
+    const categories = [...new Set(allProducts.map((p) => p.category))];
+    const [formData, setFormData] = useState({ name: "", company: "", email: "", phone: "", subject: "", product: "", message: "" });
     const [errors, setErrors] = useState({});
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -50,6 +52,7 @@ const ContactForm = () => {
                     email: "",
                     phone: "",
                     subject: "",
+                    product: "",
                     message: "",
                 });
 
@@ -129,6 +132,32 @@ const ContactForm = () => {
                             {/* Subject */}
                             <input type="text" name="subject" value={formData.subject} onChange={handleChange}
                                 placeholder="Subject *" className={`${inputClass("subject")} px-4`} />
+
+                            {/* Product of Interest */}
+                            <div className="group relative">
+                                <Package size={18} className={`absolute left-4 top-4 transition-colors duration-300 group-focus-within:text-blue-600 ${errors.product ? "text-red-400" : "text-slate-400"}`} />
+                                <select
+                                    name="product"
+                                    value={formData.product}
+                                    onChange={handleChange}
+                                    className={`${inputClass("product")} pl-12 pr-4 appearance-none bg-white cursor-pointer`}
+                                >
+                                    <option value="">Product of Interest</option>
+                                    <option value="General Enquiry">General Enquiry</option>
+                                    {categories.map((cat) => (
+                                        <optgroup key={cat} label={cat}>
+                                            {allProducts
+                                                .filter((p) => p.category === cat)
+                                                .map((p) => (
+                                                    <option key={p.id} value={p.name}>
+                                                        {p.name}
+                                                    </option>
+                                                ))}
+                                        </optgroup>
+                                    ))}
+                                </select>
+                                <span className="pointer-events-none absolute right-4 top-4 text-slate-400">▾</span>
+                            </div>
 
                             {/* Message */}
                             <textarea rows="6" name="message" value={formData.message} onChange={handleChange}
