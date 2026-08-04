@@ -8,9 +8,19 @@ export const allProducts = [
         category: "Industrial Pumps",
         name: "Centrifugal Pump",
         image: "/products/centrifugal-pump.jpg",
-        description: "High-efficiency pump for continuous industrial operations.",
+        description:
+            "SteelNova Centrifugal Pumps are engineered for high-performance fluid transfer in demanding industrial applications. Manufactured with premium materials, they offer superior efficiency, reliable operation, and long service life. Ideal for continuous operation across multiple industries.",
         application: "Oil & Gas",
         features: ["Heavy Duty", "Energy Efficient", "Low Maintenance"],
+        specifications: {
+            Material: "Cast Iron / Stainless Steel",
+            Capacity: "Up to 5000 LPM",
+            Pressure: "Up to 25 Bar",
+            Temperature: "-20°C to 180°C",
+            Connection: "Flanged",
+            Standard: "ISO 5199",
+            Warranty: "12 Months",
+        },
     },
     {
         id: 2,
@@ -18,9 +28,19 @@ export const allProducts = [
         category: "Industrial Pumps",
         name: "Chemical Process Pump",
         image: "/products/chemical-process-pump.jpg",
-        description: "Reliable chemical transfer pump for corrosive fluids.",
+        description:
+            "SteelNova Chemical Process Pumps are purpose-built for the safe and reliable transfer of aggressive and corrosive fluids. Constructed from chemically resistant alloys, these pumps ensure leak-free performance and long operational life in the harshest chemical environments.",
         application: "Chemical",
         features: ["Corrosion Resistant", "Leak Proof", "Long Service Life"],
+        specifications: {
+            Material: "SS 316L / PTFE Lined",
+            Capacity: "Up to 3000 LPM",
+            Pressure: "Up to 16 Bar",
+            Temperature: "-10°C to 150°C",
+            Connection: "Flanged / Threaded",
+            Standard: "ISO 2858",
+            Warranty: "12 Months",
+        },
     },
     {
         id: 3,
@@ -28,9 +48,19 @@ export const allProducts = [
         category: "Industrial Pumps",
         name: "Slurry Pump",
         image: "/products/slurry-pump.jpg",
-        description: "Heavy-duty pump for abrasive slurry applications.",
+        description:
+            "SteelNova Slurry Pumps are designed to handle high-density abrasive slurries with outstanding wear resistance. With robust construction and heavy-duty wear liners, these pumps deliver reliable performance in mining and mineral processing environments.",
         application: "Mining",
         features: ["Wear Resistant", "High Capacity", "Durable"],
+        specifications: {
+            Material: "High Chrome Alloy / Rubber Lined",
+            Capacity: "Up to 8000 LPM",
+            Pressure: "Up to 20 Bar",
+            Temperature: "Up to 90°C",
+            "Solids Handling": "Up to 60% by weight",
+            Connection: "Flanged",
+            Warranty: "12 Months",
+        },
     },
     {
         id: 4,
@@ -38,9 +68,19 @@ export const allProducts = [
         category: "Industrial Pumps",
         name: "Multistage Pump",
         image: "/products/multistage-pump.jpg",
-        description: "Designed for high-pressure industrial applications.",
+        description:
+            "SteelNova Multistage Pumps are engineered for high-pressure applications requiring elevated head across multiple stages. Built for reliability in power plants and boiler feed systems, these pumps combine precision hydraulics with energy-efficient design.",
         application: "Power Plants",
         features: ["High Pressure", "Energy Saving", "Reliable"],
+        specifications: {
+            Material: "Cast Iron / Stainless Steel",
+            Capacity: "Up to 2000 LPM",
+            Pressure: "Up to 100 Bar",
+            Temperature: "-20°C to 200°C",
+            Stages: "2 to 12",
+            Connection: "Flanged",
+            Warranty: "18 Months",
+        },
     },
 
     // ===========================
@@ -52,9 +92,19 @@ export const allProducts = [
         category: "Industrial Valves",
         name: "Gate Valve",
         image: "/products/gate-valve.jpg",
-        description: "Robust valve for full flow isolation.",
+        description:
+            "SteelNova Gate Valves provide dependable full-bore isolation with minimal flow restriction. Engineered for high-pressure oil and gas pipelines, they feature precision-machined wedge discs and robust body construction for long-term leak-tight performance.",
         application: "Oil & Gas",
         features: ["Heavy Duty", "Leak Tight", "Long Life"],
+        specifications: {
+            Material: "Carbon Steel / Stainless Steel",
+            "Size Range": "DN 15 to DN 600",
+            "Pressure Rating": "Class 150 to 2500",
+            Temperature: "-29°C to 425°C",
+            "End Connection": "Flanged / BW",
+            Standard: "API 600 / BS 1414",
+            Warranty: "12 Months",
+        },
     },
     {
         id: 6,
@@ -62,9 +112,19 @@ export const allProducts = [
         category: "Industrial Valves",
         name: "Ball Valve",
         image: "/products/ball-valve.jpg",
-        description: "Quarter-turn valve for reliable flow control.",
+        description:
+            "SteelNova Ball Valves offer fast quarter-turn operation with bubble-tight shutoff. Ideal for chemical and process industries, they are available in full bore and reduced bore configurations with a wide choice of seat materials for media compatibility.",
         application: "Chemical",
         features: ["Quick Operation", "Corrosion Resistant", "Reliable"],
+        specifications: {
+            Material: "SS 304 / SS 316 / Carbon Steel",
+            "Size Range": "DN 8 to DN 400",
+            "Pressure Rating": "PN 10 to PN 420",
+            Temperature: "-40°C to 230°C",
+            "End Connection": "Flanged / Threaded / BW",
+            Standard: "API 6D / BS 5351",
+            Warranty: "12 Months",
+        },
     },
     {
         id: 7,
@@ -72,9 +132,19 @@ export const allProducts = [
         category: "Industrial Valves",
         name: "Butterfly Valve",
         image: "/products/butterfly-valve.jpg",
-        description: "Compact valve suitable for large pipelines.",
+        description:
+            "SteelNova Butterfly Valves combine a compact, lightweight design with excellent flow control capability for large-diameter pipelines. Suitable for water treatment and HVAC systems, they are available in wafer, lug, and double-flanged configurations.",
         application: "Water Treatment",
         features: ["Lightweight", "Easy Installation", "Low Maintenance"],
+        specifications: {
+            Material: "Ductile Iron / SS 316",
+            "Size Range": "DN 50 to DN 2000",
+            "Pressure Rating": "PN 6 to PN 25",
+            Temperature: "-10°C to 120°C",
+            "End Connection": "Wafer / Lug / Flanged",
+            Standard: "EN 593 / API 609",
+            Warranty: "12 Months",
+        },
     },
     {
         id: 8,
@@ -82,9 +152,19 @@ export const allProducts = [
         category: "Industrial Valves",
         name: "Globe Valve",
         image: "/products/globe-valve.jpg",
-        description: "Precise flow regulation for industrial systems.",
+        description:
+            "SteelNova Globe Valves deliver precise flow throttling and regulation in steam, water, and gas systems. With a renewable seat design and stem-guided disc, they offer accurate control and long maintenance intervals in demanding process environments.",
         application: "Steam Systems",
         features: ["Accurate Control", "Heavy Duty", "Reliable"],
+        specifications: {
+            Material: "Carbon Steel / Stainless Steel",
+            "Size Range": "DN 15 to DN 300",
+            "Pressure Rating": "Class 150 to 900",
+            Temperature: "-29°C to 540°C",
+            "End Connection": "Flanged / Threaded",
+            Standard: "API 623 / ASME B16.34",
+            Warranty: "12 Months",
+        },
     },
 
     // ===========================
@@ -96,9 +176,19 @@ export const allProducts = [
         category: "Pressure Vessels",
         name: "Storage Vessel",
         image: "/products/storage-vessel.jpg",
-        description: "Industrial vessel for safe fluid storage.",
+        description:
+            "SteelNova Storage Vessels are custom-engineered to safely contain liquids, gases, and slurries under pressure. Each vessel is designed and fabricated in compliance with ASME standards and undergoes rigorous hydrostatic testing before delivery.",
         application: "Chemical",
         features: ["ASME Design", "High Strength", "Corrosion Resistant"],
+        specifications: {
+            Material: "CS / SS 304 / SS 316",
+            Capacity: "500 L to 1,00,000 L",
+            "Design Pressure": "Up to 50 Bar",
+            "Design Temperature": "-10°C to 350°C",
+            "Shell Thickness": "6 mm to 50 mm",
+            Standard: "ASME Sec. VIII Div. 1",
+            Warranty: "24 Months",
+        },
     },
     {
         id: 10,
@@ -106,9 +196,19 @@ export const allProducts = [
         category: "Pressure Vessels",
         name: "Reactor Vessel",
         image: "/products/reactor-vessel.jpg",
-        description: "Engineered vessel for industrial processing.",
+        description:
+            "SteelNova Reactor Vessels are precision-engineered for chemical, petrochemical, and pharmaceutical processes. Built with high-integrity welds and agitator provisions, they ensure safe and efficient process reactions under elevated pressure and temperature conditions.",
         application: "Chemical Plants",
         features: ["High Pressure", "Reliable", "Heavy Duty"],
+        specifications: {
+            Material: "SS 316L / Hastelloy / CS Clad",
+            Capacity: "200 L to 50,000 L",
+            "Design Pressure": "Up to 100 Bar",
+            "Design Temperature": "-20°C to 450°C",
+            Agitator: "Top / Bottom Entry",
+            Standard: "ASME Sec. VIII / PED",
+            Warranty: "24 Months",
+        },
     },
     {
         id: 11,
@@ -116,9 +216,19 @@ export const allProducts = [
         category: "Pressure Vessels",
         name: "Separator Vessel",
         image: "/products/separator-vessel.jpg",
-        description: "Efficient separation of liquids and gases.",
+        description:
+            "SteelNova Separator Vessels efficiently separate gas, liquid, and solid phases in oil & gas production and processing facilities. Designed for two-phase and three-phase separation, they are equipped with internals such as demisters and vortex breakers.",
         application: "Oil & Gas",
         features: ["High Efficiency", "Reliable", "Durable"],
+        specifications: {
+            Material: "Carbon Steel / SS 316",
+            "Vessel Type": "Horizontal / Vertical",
+            "Design Pressure": "Up to 70 Bar",
+            "Design Temperature": "-10°C to 300°C",
+            Phases: "Two-phase / Three-phase",
+            Standard: "ASME Sec. VIII Div. 1",
+            Warranty: "24 Months",
+        },
     },
     {
         id: 12,
@@ -126,9 +236,19 @@ export const allProducts = [
         category: "Pressure Vessels",
         name: "Air Receiver Tank",
         image: "/products/air-receiver.jpg",
-        description: "Compressed air storage solution.",
+        description:
+            "SteelNova Air Receiver Tanks store compressed air and regulate pressure fluctuations in pneumatic systems. Manufactured to IS / ASME standards, they are available in vertical and horizontal configurations with all required safety fittings.",
         application: "Manufacturing",
         features: ["Heavy Duty", "Safe Design", "Reliable"],
+        specifications: {
+            Material: "MS / Carbon Steel",
+            Capacity: "100 L to 10,000 L",
+            "Working Pressure": "Up to 16 Bar",
+            "Design Temperature": "Up to 100°C",
+            "Safety Valve": "Included",
+            Standard: "IS 2825 / ASME Sec. VIII",
+            Warranty: "12 Months",
+        },
     },
 
     // ===========================
@@ -140,9 +260,19 @@ export const allProducts = [
         category: "Heat Exchangers",
         name: "Shell & Tube",
         image: "/products/shell-tube.jpg",
-        description: "Efficient heat transfer for industrial processes.",
+        description:
+            "SteelNova Shell & Tube Heat Exchangers deliver reliable and efficient thermal energy transfer across a wide range of industrial processes. Custom-designed for each application, they handle high-pressure and high-temperature duties with ease.",
         application: "Power Plants",
         features: ["High Efficiency", "Durable", "Easy Maintenance"],
+        specifications: {
+            Material: "CS Shell / SS Tubes",
+            "Heat Duty": "Up to 10 MW",
+            "Design Pressure": "Up to 100 Bar",
+            "Design Temperature": "-20°C to 500°C",
+            "Tube Diameter": "19 mm to 38 mm",
+            Standard: "TEMA / ASME Sec. VIII",
+            Warranty: "18 Months",
+        },
     },
     {
         id: 14,
@@ -150,9 +280,19 @@ export const allProducts = [
         category: "Heat Exchangers",
         name: "Plate Heat Exchanger",
         image: "/products/plate-exchanger.jpg",
-        description: "Compact heat exchanger with excellent performance.",
+        description:
+            "SteelNova Plate Heat Exchangers provide superior thermal performance in a compact footprint. Ideal for hygienic food-grade applications and process cooling duties, they feature gasketed or brazed plate designs for easy cleaning and maintenance.",
         application: "Food Processing",
         features: ["Compact", "Energy Saving", "Efficient"],
+        specifications: {
+            Material: "SS 316L Plates / NBR Gaskets",
+            "Heat Duty": "Up to 2 MW",
+            "Design Pressure": "Up to 25 Bar",
+            "Design Temperature": "-10°C to 180°C",
+            "Plate Thickness": "0.5 mm to 1.0 mm",
+            Standard: "PED 2014/68/EU",
+            Warranty: "18 Months",
+        },
     },
     {
         id: 15,
@@ -160,9 +300,19 @@ export const allProducts = [
         category: "Heat Exchangers",
         name: "Air Cooled Heat Exchanger",
         image: "/products/air-cooled.jpg",
-        description: "Cooling solution without water consumption.",
+        description:
+            "SteelNova Air Cooled Heat Exchangers eliminate water cooling requirements, making them ideal for remote and water-scarce sites. Used extensively in oil refineries and gas processing plants, they offer robust finned-tube construction for maximum heat rejection.",
         application: "Oil Refineries",
         features: ["Water Saving", "Reliable", "Low Maintenance"],
+        specifications: {
+            Material: "Carbon Steel / Aluminium Fins",
+            "Heat Duty": "Up to 5 MW",
+            "Design Pressure": "Up to 50 Bar",
+            "Design Temperature": "Up to 300°C",
+            "Fan Type": "Forced / Induced Draft",
+            Standard: "API 661",
+            Warranty: "18 Months",
+        },
     },
     {
         id: 16,
@@ -170,9 +320,19 @@ export const allProducts = [
         category: "Heat Exchangers",
         name: "Condenser Unit",
         image: "/products/condenser.jpg",
-        description: "Industrial condenser for thermal systems.",
+        description:
+            "SteelNova Condenser Units are engineered for steam condensation and vapor recovery in power generation and process industries. Built with high-integrity tube bundles and robust shell construction, they ensure maximum thermal efficiency and reliability.",
         application: "Power Plants",
         features: ["Efficient", "Heavy Duty", "Reliable"],
+        specifications: {
+            Material: "CS Shell / Admiralty Brass Tubes",
+            "Heat Duty": "Up to 15 MW",
+            "Design Pressure": "Up to 30 Bar",
+            "Design Temperature": "Up to 350°C",
+            "Cooling Medium": "Water / Air",
+            Standard: "TEMA / HEI",
+            Warranty: "18 Months",
+        },
     },
 
     // ===========================
@@ -184,9 +344,19 @@ export const allProducts = [
         category: "Storage Tanks",
         name: "Vertical Tank",
         image: "/products/vertical-tank.jpg",
-        description: "Vertical storage solution for industrial liquids.",
+        description:
+            "SteelNova Vertical Storage Tanks are engineered for efficient storage of water, chemicals, and industrial liquids. With a minimal footprint and large capacity, they are the preferred choice for facilities where floor space is limited.",
         application: "Water",
         features: ["High Capacity", "Durable", "Corrosion Resistant"],
+        specifications: {
+            Material: "MS / SS 304 / SS 316",
+            Capacity: "1,000 L to 2,00,000 L",
+            "Design Pressure": "Atmospheric to 5 Bar",
+            "Shell Thickness": "5 mm to 20 mm",
+            Finish: "Internal EP / External Painted",
+            Standard: "IS 803 / API 650",
+            Warranty: "24 Months",
+        },
     },
     {
         id: 18,
@@ -194,9 +364,19 @@ export const allProducts = [
         category: "Storage Tanks",
         name: "Horizontal Tank",
         image: "/products/horizontal-tank.jpg",
-        description: "Heavy-duty horizontal storage tank.",
+        description:
+            "SteelNova Horizontal Storage Tanks offer stable, low-profile storage for fuel, chemicals, and industrial liquids. Designed for ground-level or saddle-mounted installation, they are easy to transport and integrate into existing process layouts.",
         application: "Fuel",
         features: ["Reliable", "Strong Design", "Long Life"],
+        specifications: {
+            Material: "MS / Carbon Steel / FRP",
+            Capacity: "500 L to 50,000 L",
+            "Design Pressure": "Atmospheric to 5 Bar",
+            "Shell Thickness": "5 mm to 16 mm",
+            "Mounting": "Saddle / Skid",
+            Standard: "IS 803 / API 650",
+            Warranty: "24 Months",
+        },
     },
     {
         id: 19,
@@ -204,9 +384,19 @@ export const allProducts = [
         category: "Storage Tanks",
         name: "Fuel Storage Tank",
         image: "/products/fuel-tank.jpg",
-        description: "Safe storage solution for petroleum products.",
+        description:
+            "SteelNova Fuel Storage Tanks are designed for the safe storage of petroleum products, diesel, and other flammable liquids. Manufactured with internal linings, secondary containment, and safety fittings, they meet all statutory safety requirements.",
         application: "Oil & Gas",
         features: ["Leak Proof", "Heavy Duty", "Safe"],
+        specifications: {
+            Material: "Carbon Steel with Epoxy Lining",
+            Capacity: "5,000 L to 5,00,000 L",
+            "Design Pressure": "Atmospheric",
+            "Shell Thickness": "6 mm to 25 mm",
+            "Safety Features": "Vent / Overflow / Earth",
+            Standard: "API 650 / IS 10987",
+            Warranty: "24 Months",
+        },
     },
     {
         id: 20,
@@ -214,9 +404,19 @@ export const allProducts = [
         category: "Storage Tanks",
         name: "Water Storage Tank",
         image: "/products/water-tank.jpg",
-        description: "Large-capacity water storage system.",
+        description:
+            "SteelNova Water Storage Tanks are constructed from food-grade materials suitable for potable water, treated water, and firefighting reserves. With sealed construction and smooth internal finish, they prevent contamination and ensure water quality.",
         application: "Water Treatment",
         features: ["Food Grade", "High Capacity", "Reliable"],
+        specifications: {
+            Material: "SS 304 / FRP / HDPE Lined",
+            Capacity: "2,000 L to 5,00,000 L",
+            "Design Pressure": "Atmospheric",
+            "Shell Thickness": "5 mm to 16 mm",
+            Finish: "Food Grade Internal Polish",
+            Standard: "IS 12729 / NSF 61",
+            Warranty: "24 Months",
+        },
     },
 
     // ===========================
@@ -228,9 +428,19 @@ export const allProducts = [
         category: "Custom Fabrication",
         name: "Steel Structure",
         image: "/products/steel-structure.jpg",
-        description: "Custom structural steel fabrication.",
+        description:
+            "SteelNova Custom Steel Structures are precision-engineered and fabricated for industrial, commercial, and infrastructure projects. Using high-strength structural steel and advanced fabrication techniques, we deliver robust structures that meet project-specific load and design requirements.",
         application: "Construction",
         features: ["Precision Built", "Heavy Duty", "Durable"],
+        specifications: {
+            Material: "IS 2062 Gr. A / B Structural Steel",
+            "Steel Grade": "E250 / E350",
+            Finish: "Hot-Dip Galvanized / Painted",
+            Connections: "Bolted / Welded",
+            "Surface Treatment": "Shot Blasted SA 2.5",
+            Standard: "IS 800 / AISC 360",
+            Warranty: "24 Months",
+        },
     },
     {
         id: 22,
@@ -238,9 +448,19 @@ export const allProducts = [
         category: "Custom Fabrication",
         name: "Industrial Skid",
         image: "/products/industrial-skid.jpg",
-        description: "Modular skid systems for industrial applications.",
+        description:
+            "SteelNova Industrial Skids are modular, pre-assembled systems that integrate multiple process components on a single structural frame. Designed for rapid deployment and minimal site work, they are widely used in oil & gas, chemical, and utility industries.",
         application: "Oil & Gas",
         features: ["Compact", "Customizable", "Reliable"],
+        specifications: {
+            Material: "Structural Steel / SS",
+            "Skid Frame": "I-Beam / Channel Section",
+            Finish: "Epoxy Painted / Galvanized",
+            Testing: "FAT at SteelNova Works",
+            Instrumentation: "As per Client Spec",
+            Standard: "ASME / API / Client Spec",
+            Warranty: "18 Months",
+        },
     },
     {
         id: 23,
@@ -248,9 +468,19 @@ export const allProducts = [
         category: "Custom Fabrication",
         name: "Pipe Spool",
         image: "/products/pipe-spool.jpg",
-        description: "Precision fabricated piping systems.",
+        description:
+            "SteelNova Pipe Spools are precision-fabricated piping assemblies manufactured to exact project specifications. With strict dimensional control, radiographic weld inspection, and surface treatment, they ensure leak-free installation and fast site assembly.",
         application: "Chemical",
         features: ["Accurate", "Leak Proof", "High Quality"],
+        specifications: {
+            Material: "CS / SS 304 / SS 316 / Alloy Steel",
+            "Size Range": "½\" to 48\" NB",
+            "Pressure Rating": "ANSI Class 150 to 2500",
+            "Weld Testing": "RT / UT / PT",
+            Finish: "Painted / Pickled & Passivated",
+            Standard: "ASME B31.3 / B31.1",
+            Warranty: "12 Months",
+        },
     },
     {
         id: 24,
@@ -258,8 +488,18 @@ export const allProducts = [
         category: "Custom Fabrication",
         name: "Custom Equipment",
         image: "/products/custom-equipment.jpg",
-        description: "Tailor-made industrial equipment solutions.",
+        description:
+            "SteelNova Custom Equipment solutions are tailored to meet unique process requirements across multiple industries. From concept design to final commissioning, our engineering team works closely with clients to deliver bespoke equipment that exceeds performance expectations.",
         application: "Multiple Industries",
         features: ["Custom Design", "ISO Quality", "Reliable"],
+        specifications: {
+            Material: "As per Client Requirement",
+            "Design Standard": "ASME / IS / EN / Client Spec",
+            "Quality System": "ISO 9001:2015",
+            Testing: "As per Applicable Code",
+            Documentation: "Full MDR / ITP",
+            "Lead Time": "As per Project Schedule",
+            Warranty: "As per Contract",
+        },
     },
 ];

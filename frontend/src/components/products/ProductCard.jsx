@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
                     {product.name}
                 </h3>
 
-                <p className="mt-4 leading-7 text-slate-600">
+                <p className="mt-4 leading-7 text-slate-600 line-clamp-2">
                     {product.description}
                 </p>
 

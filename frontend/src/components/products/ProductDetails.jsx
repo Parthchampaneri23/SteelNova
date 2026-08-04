@@ -109,6 +109,42 @@ const ProductDetails = () => {
 
                         </div>
 
+                        {product.specifications && (
+                            <div className="mt-10">
+
+                                <h3 className="text-2xl font-bold text-slate-900">
+                                    Specifications
+                                </h3>
+
+                                <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+                                    <table className="w-full text-sm">
+                                        <tbody>
+                                            {Object.entries(product.specifications).map(
+                                                ([key, value], index) => (
+                                                    <tr
+                                                        key={key}
+                                                        className={
+                                                            index % 2 === 0
+                                                                ? "bg-white"
+                                                                : "bg-slate-50"
+                                                        }
+                                                    >
+                                                        <td className="w-2/5 border-b border-slate-200 px-5 py-3.5 font-semibold text-slate-700">
+                                                            {key}
+                                                        </td>
+                                                        <td className="border-b border-slate-200 px-5 py-3.5 text-slate-600">
+                                                            {value}
+                                                        </td>
+                                                    </tr>
+                                                )
+                                            )}
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        )}
+
                         <Link
                             to="/contact#quote-form"
                             className="mt-10 inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
