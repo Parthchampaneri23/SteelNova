@@ -1,6 +1,6 @@
 const AboutHero = () => {
     return (
-        <section className="relative flex h-[70vh] items-center justify-center overflow-hidden bg-slate-900">
+        <section className="relative flex h-[45vh] items-center justify-center overflow-hidden bg-slate-900">
 
             {/* Background */}
             <div className="absolute inset-0">

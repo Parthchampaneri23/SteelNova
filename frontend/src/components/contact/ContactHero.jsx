@@ -1,7 +1,7 @@
 const ContactHero = () => {
     return (
         <section
-            className="relative h-[500px] flex items-center justify-center bg-cover bg-center"
+            className="relative h-[380px] flex items-center justify-center bg-cover bg-center"
             style={{
                 backgroundImage: "url('/contact/contact-hero.png')",
             }}

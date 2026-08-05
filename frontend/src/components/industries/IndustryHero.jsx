@@ -5,7 +5,7 @@ const IndustryHero = () => {
             <img
                 src="/industries/industries-hero.png"
                 alt="Industries"
-                className="h-[600px] w-full object-cover"
+                className="h-[400px] w-full object-cover"
             />
 
             <div className="absolute inset-0 bg-slate-900/65"></div>

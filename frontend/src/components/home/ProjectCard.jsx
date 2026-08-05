@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <Link
+            to="/projects"
+            className="group block overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
 
             <img
                 src={project.image}
@@ -17,7 +19,7 @@ const ProjectCard = ({ project }) => {
                     {project.category}
                 </span>
 
-                <h3 className="mt-4 text-2xl font-bold">
+                <h3 className="mt-4 text-2xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-blue-600">
                     {project.title}
                 </h3>
 
@@ -25,14 +27,9 @@ const ProjectCard = ({ project }) => {
                     {project.description}
                 </p>
 
-                <Link to="/projects" className="mt-6 flex items-center gap-2 font-semibold text-blue-600">
-                    View Project
-                    <ArrowRight size={18} />
-                </Link>
-
             </div>
 
-        </div>
+        </Link>
     );
 };
 

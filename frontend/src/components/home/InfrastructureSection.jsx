@@ -4,13 +4,15 @@ const InfrastructureSection = () => {
     return (
         <section className="py-14 bg-white">
 
-            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-stretch">
 
-                <img
-                    src={infrastructureImage}
-                    alt="Infrastructure"
-                    className="rounded-3xl shadow-xl transition-transform duration-300 ease-in-out hover:scale-105"
-                />
+                <div className="overflow-hidden rounded-3xl shadow-xl min-h-[400px]">
+                    <img
+                        src={infrastructureImage}
+                        alt="Infrastructure"
+                        className="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                    />
+                </div>
 
                 <div>
 

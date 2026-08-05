@@ -29,9 +29,12 @@ const IndustryGrid = () => {
 
                     {industries.map((industry) => (
 
-                        <div
+                        <a
                             key={industry.id}
-                            className="group overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                            href={`#${industry.title
+                                .toLowerCase()
+                                .replace(/[^a-z0-9]+/g, "-")}`}
+                            className="group block overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                         >
 
                             <div className="overflow-hidden">
@@ -46,7 +49,7 @@ const IndustryGrid = () => {
 
                             <div className="p-7">
 
-                                <h3 className="text-2xl font-bold text-slate-900">
+                                <h3 className="text-2xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-blue-600">
                                     {industry.title}
                                 </h3>
 
@@ -54,22 +57,9 @@ const IndustryGrid = () => {
                                     {industry.description}
                                 </p>
 
-                                <a
-                                    href={`#${industry.title
-                                        .toLowerCase()
-                                        .replace(/[^a-z0-9]+/g, "-")}`}
-                                    className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 hover:gap-3 hover:text-blue-700"
-                                >
-                                    Learn More
-                                    <ArrowRight
-                                        size={18}
-                                        className="transition-transform duration-300 group-hover:translate-x-1"
-                                    />
-                                </a>
-
                             </div>
 
-                        </div>
+                        </a>
 
                     ))}
 

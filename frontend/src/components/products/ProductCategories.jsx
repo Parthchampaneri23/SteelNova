@@ -29,9 +29,12 @@ const ProductCategories = () => {
 
                     {productCategories.map((category) => (
 
-                        <div
+                        <a
                             key={category.id}
-                            className="group overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                            href={`#${category.title
+                                .toLowerCase()
+                                .replace(/\s+/g, "-")}`}
+                            className="group block overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
                         >
 
                             <img
@@ -46,7 +49,7 @@ const ProductCategories = () => {
                                     {category.count} Products
                                 </span>
 
-                                <h3 className="mt-5 text-2xl font-bold">
+                                <h3 className="mt-5 text-2xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-blue-600">
                                     {category.title}
                                 </h3>
 
@@ -54,19 +57,9 @@ const ProductCategories = () => {
                                     {category.description}
                                 </p>
 
-                                <a
-                                    href={`#${category.title
-                                        .toLowerCase()
-                                        .replace(/\s+/g, "-")}`}
-                                    className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-3"
-                                >
-                                    Explore
-                                    <ArrowRight size={18} />
-                                </a>
-
                             </div>
 
-                        </div>
+                        </a>
 
                     ))}
 

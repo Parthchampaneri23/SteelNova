@@ -5,17 +5,15 @@ import aboutImage from "../../assets/images/about/about-company.png";
 const AboutPreview = () => {
     return (
         <section className="bg-slate-50 py-14">
-            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-stretch">
 
                 {/* Left Image */}
-                <div className="relative">
+                <div className="overflow-hidden rounded-3xl shadow-2xl min-h-[400px]">
                     <img
                         src={aboutImage}
                         alt="SteelNova Industries"
-                        className="rounded-3xl shadow-2xl w-full"
+                        className="h-full w-full object-cover"
                     />
-
-
                 </div>
 
                 {/* Right Content */}

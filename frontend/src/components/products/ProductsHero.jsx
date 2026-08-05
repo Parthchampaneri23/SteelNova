@@ -1,7 +1,7 @@
 const ProductsHero = () => {
     return (
         <section
-            className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            className="relative h-[40vh] flex items-center justify-center bg-cover bg-center"
             style={{
                 backgroundImage: "url('/products/products-hero.png')",
             }}

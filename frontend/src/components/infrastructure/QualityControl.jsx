@@ -13,13 +13,15 @@ const QualityControl = () => {
     return (
         <section className="py-14 bg-white">
 
-            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-stretch">
 
-                <img
-                    src="/infrastructure/quality-control.png"
-                    alt="Quality Control"
-                    className="rounded-3xl shadow-xl transition duration-500 hover:scale-105"
-                />
+                <div className="overflow-hidden rounded-3xl shadow-xl min-h-[400px]">
+                    <img
+                        src="/infrastructure/quality-control.png"
+                        alt="Quality Control"
+                        className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                    />
+                </div>
 
                 <div>
 

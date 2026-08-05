@@ -5,7 +5,7 @@ const InfrastructureHero = () => {
             <img
                 src="/infrastructure/infrastructure-hero.png"
                 alt="Infrastructure"
-                className="h-[600px] w-full object-cover"
+                className="h-[400px] w-full object-cover"
             />
 
             <div className="absolute inset-0 bg-slate-900/70"></div>

@@ -34,7 +34,8 @@ const BlogsSection = () => {
 
                         <div
                             key={blog.id}
-                            className="group overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                            onClick={() => setSelectedBlog(blog)}
+                            className="group overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
                         >
 
                             <div className="overflow-hidden">
@@ -68,14 +69,6 @@ const BlogsSection = () => {
                                 <p className="mt-4 leading-7 text-slate-600">
                                     {blog.description}
                                 </p>
-
-                                <button
-                                    onClick={() => setSelectedBlog(blog)}
-                                    className="mt-8 flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 hover:gap-4"
-                                >
-                                    Read More
-                                    <ArrowRight size={18} />
-                                </button>
 
                             </div>
 

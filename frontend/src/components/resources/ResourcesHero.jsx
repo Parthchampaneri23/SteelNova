@@ -1,7 +1,7 @@
 const ResourcesHero = () => {
     return (
         <section
-            className="relative h-[70vh] flex items-center justify-center text-white"
+            className="relative h-[45vh] flex items-center justify-center text-white"
             style={{
                 backgroundImage: "url('/resources/resources-hero.png')",
                 backgroundSize: "cover",

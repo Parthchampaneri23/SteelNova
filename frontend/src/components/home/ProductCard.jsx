@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
 const ProductCard = ({ product }) => {
     return (
-        <div className="group overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+        <Link
+            to={"/products" + (product.slug || "")}
+            className="group block overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+        >
 
             {/* Image */}
             <div className="relative h-72 overflow-hidden">
@@ -14,14 +16,8 @@ const ProductCard = ({ product }) => {
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100 flex items-end justify-center pb-8">
-
-                    <Link to={"/products" + (product.slug || "")} className="translate-y-8 rounded-xl bg-white px-6 py-3 font-semibold text-blue-700 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                        View Product
-                    </Link>
-
-                </div>
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-blue-900/10 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
 
             </div>
 
@@ -36,14 +32,9 @@ const ProductCard = ({ product }) => {
                     {product.description}
                 </p>
 
-                <Link to={"/products" + (product.slug || "")} className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4">
-                    Learn More
-                    <ArrowRight size={18} />
-                </Link>
-
             </div>
 
-        </div>
+        </Link>
     );
 };
 

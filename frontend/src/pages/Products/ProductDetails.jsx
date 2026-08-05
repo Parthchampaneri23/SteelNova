@@ -39,9 +39,9 @@ const ProductDetails = () => {
                     Back to Products
                 </Link>
 
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-                    <div className="group overflow-hidden rounded-3xl bg-white p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                    <div className="group overflow-hidden rounded-3xl bg-white p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl lg:sticky lg:top-8">
                         <img
                             src={product.image}
                             alt={product.name}
@@ -64,7 +64,7 @@ const ProductDetails = () => {
                         </p>
 
                         <div className="mt-8">
-                            <h3 className="text-2xl font-bold">
+                            <h3 className="text-2xl font-bold text-slate-900">
                                 Key Features
                             </h3>
 
@@ -88,48 +88,14 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="mt-10">
-                            <h3 className="text-2xl font-bold">
+                            <h3 className="text-2xl font-bold text-slate-900">
                                 Applications
                             </h3>
 
-                            <p className="mt-4 text-slate-600">
+                            <p className="mt-4 text-slate-700 leading-7">
                                 {product.application}
                             </p>
                         </div>
-
-                        {product.specifications && (
-                            <div className="mt-10">
-                                <h3 className="text-2xl font-bold text-slate-900">
-                                    Specifications
-                                </h3>
-
-                                <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
-                                    <table className="w-full text-sm">
-                                        <tbody>
-                                            {Object.entries(product.specifications).map(
-                                                ([key, value], index) => (
-                                                    <tr
-                                                        key={key}
-                                                        className={
-                                                            index % 2 === 0
-                                                                ? "bg-white"
-                                                                : "bg-slate-50"
-                                                        }
-                                                    >
-                                                        <td className="w-2/5 border-b border-slate-200 px-5 py-3.5 font-semibold text-slate-700">
-                                                            {key}
-                                                        </td>
-                                                        <td className="border-b border-slate-200 px-5 py-3.5 text-slate-600">
-                                                            {value}
-                                                        </td>
-                                                    </tr>
-                                                )
-                                            )}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        )}
 
                         <Link
                             to="/contact#quote-form"
@@ -142,6 +108,40 @@ const ProductDetails = () => {
                     </div>
 
                 </div>
+
+                {product.specifications && (
+                    <div className="mt-16 border-t border-slate-200 pt-16">
+                        <h2 className="text-3xl font-bold text-slate-900 mb-8">
+                            Product Specifications
+                        </h2>
+
+                        <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm max-w-4xl">
+                            <table className="w-full text-base">
+                                <tbody>
+                                    {Object.entries(product.specifications).map(
+                                        ([key, value], index) => (
+                                            <tr
+                                                key={key}
+                                                className={
+                                                    index % 2 === 0
+                                                        ? "bg-white"
+                                                        : "bg-slate-50"
+                                                }
+                                            >
+                                                <td className="w-2/5 border-b border-slate-200 px-6 py-4 font-semibold text-slate-700">
+                                                    {key}
+                                                </td>
+                                                <td className="border-b border-slate-200 px-6 py-4 text-slate-600 font-medium">
+                                                    {value}
+                                                </td>
+                                            </tr>
+                                        )
+                                    )}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                )}
 
             </div>
         </section>

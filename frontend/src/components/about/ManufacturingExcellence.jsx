@@ -56,11 +56,11 @@ const ManufacturingExcellence = () => {
 
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-stretch">
 
                     {/* Image */}
 
-                    <div className="overflow-hidden rounded-3xl shadow-2xl">
+                    <div className="overflow-hidden rounded-3xl shadow-2xl min-h-[400px]">
 
                         <img
                             src="/about/cta-factory.png"
@@ -72,7 +72,7 @@ const ManufacturingExcellence = () => {
 
                     {/* Steps */}
 
-                    <div className="space-y-8">
+                    <div className="grid sm:grid-cols-2 gap-6">
 
                         {steps.map((step, index) => {
 
@@ -82,29 +82,27 @@ const ManufacturingExcellence = () => {
 
                                 <div
                                     key={step.title}
-                                    className="group flex gap-6 rounded-3xl bg-slate-50 p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-xl"
+                                    className="group flex flex-col justify-between rounded-3xl bg-slate-50 p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-xl"
                                 >
 
-                                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-blue-100 text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
-
-                                        <Icon size={30} />
-
-                                    </div>
-
                                     <div>
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white mb-4">
 
-                                        <span className="text-sm font-bold text-blue-600">
+                                            <Icon size={24} />
+
+                                        </div>
+
+                                        <span className="text-xs font-bold text-blue-600 tracking-widest uppercase">
                                             STEP 0{index + 1}
                                         </span>
 
-                                        <h3 className="mt-2 text-2xl font-bold">
+                                        <h3 className="mt-2 text-xl font-bold text-slate-900">
                                             {step.title}
                                         </h3>
 
-                                        <p className="mt-3 leading-7 text-slate-600">
+                                        <p className="mt-2 text-sm leading-6 text-slate-600">
                                             {step.description}
                                         </p>
-
                                     </div>
 
                                 </div>

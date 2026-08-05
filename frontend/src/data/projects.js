@@ -6,6 +6,7 @@ export const projects = [
         description:
             "Custom-engineered pumping systems for refinery operations.",
         image: "/projects/project1.png",
+        slug: "oil-refinery-expansion",
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ export const projects = [
         description:
             "High-pressure vessels and industrial valves for chemical manufacturing.",
         image: "/projects/project2.png",
+        slug: "chemical-processing-plant",
     },
     {
         id: 3,
@@ -22,5 +24,6 @@ export const projects = [
         description:
             "Complete pumping and filtration solutions for municipal water plants.",
         image: "/projects/project3.png",
+        slug: "water-treatment-facility",
     },
 ];

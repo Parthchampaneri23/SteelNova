@@ -32,13 +32,15 @@ const WhyJoin = () => {
     return (
         <section className="py-14 bg-white">
 
-            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-stretch">
 
-                <img
-                    src="/career/join-team.jpg"
-                    alt="Join Team"
-                    className="rounded-3xl shadow-xl"
-                />
+                <div className="overflow-hidden rounded-3xl shadow-xl min-h-[450px]">
+                    <img
+                        src="/career/join-team.jpg"
+                        alt="Join Team"
+                        className="h-full w-full object-cover"
+                    />
+                </div>
 
                 <div>
 

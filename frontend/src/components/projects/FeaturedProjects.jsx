@@ -1,12 +1,8 @@
-import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { projects } from "../../data/projectsData";
-import ProjectModal from "./ProjectModal";
 
 const FeaturedProjects = () => {
-    const [selectedProject, setSelectedProject] = useState(null);
-
     return (
         <section className="bg-white py-14">
 
@@ -32,9 +28,10 @@ const FeaturedProjects = () => {
 
                     {projects.map((project) => (
 
-                        <div
+                        <Link
                             key={project.id}
-                            className="group overflow-hidden rounded-3xl bg-white shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+                            to={`/projects/${project.slug}`}
+                            className="group block overflow-hidden rounded-3xl bg-white shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
                         >
 
                             <div className="overflow-hidden">
@@ -53,7 +50,7 @@ const FeaturedProjects = () => {
                                     {project.category}
                                 </span>
 
-                                <h3 className="mt-6 text-2xl font-bold">
+                                <h3 className="mt-6 text-2xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-blue-600">
                                     {project.title}
                                 </h3>
 
@@ -61,28 +58,15 @@ const FeaturedProjects = () => {
                                     {project.description}
                                 </p>
 
-                                <button
-                                    onClick={() => setSelectedProject(project)}
-                                    className="mt-8 flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 hover:gap-4"
-                                >
-                                    View Project
-                                    <ArrowRight size={18} />
-                                </button>
-
                             </div>
 
-                        </div>
+                        </Link>
 
                     ))}
 
                 </div>
 
             </div>
-
-            <ProjectModal
-                project={selectedProject}
-                onClose={() => setSelectedProject(null)}
-            />
 
         </section>
     );
