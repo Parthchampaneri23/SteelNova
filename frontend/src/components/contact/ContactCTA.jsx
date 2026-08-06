@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ContactCTA = () => {
     return (
@@ -15,14 +16,13 @@ const ContactCTA = () => {
                     requirements and receive a customized industrial solution.
                 </p>
 
-                <button className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-blue-600 transition hover:scale-105">
-
+                <Link
+                    to="/contact#quote-form"
+                    className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-blue-600 transition hover:scale-105"
+                >
                     Request A Quote
-
                     <ArrowRight size={20} />
-
-                </button>
-
+                </Link>
             </div>
 
         </section>
