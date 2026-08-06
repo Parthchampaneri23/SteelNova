@@ -75,7 +75,7 @@ const CareerCTA = () => {
             setLoading(true);
 
             const response = await axios.post(
-                "http://localhost:5000/api/careers",
+                `${import.meta.env.VITE_API_URL}/careers`,
                 {
                     fullName: formData.name,
                     email: formData.email,
