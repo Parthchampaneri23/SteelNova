@@ -56,7 +56,7 @@ const Sitemap = () => {
 
             {/* Cards */}
 
-            <section className="bg-gradient-to-br from-slate-50 via-blue-50 to-white py-20">
+            <section className="bg-gradient-to-br from-slate-50 via-blue-50 to-white py-16">
 
                 <div className="max-w-7xl mx-auto px-6">
 
@@ -101,7 +101,7 @@ const Sitemap = () => {
 
             {/* Bottom CTA */}
 
-            <section className="bg-slate-900 py-20">
+            <section className="bg-slate-900 py-16">
 
                 <div className="max-w-5xl mx-auto text-center px-6">
 

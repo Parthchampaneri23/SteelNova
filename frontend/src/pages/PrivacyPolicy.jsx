@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
 
             {/* Document */}
 
-            <section className="bg-slate-100 py-20">
+            <section className="bg-slate-100 py-16">
 
                 <div className="max-w-5xl mx-auto px-6">
 
