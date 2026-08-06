@@ -7,28 +7,28 @@ const PrivacyPolicy = () => {
             {/* Hero */}
 
             <section
-                className="relative h-[420px] flex items-center justify-center text-center text-white"
+                className="relative min-h-[380px] py-12 flex items-center justify-center bg-cover bg-center text-white"
                 style={{
                     backgroundImage: "url('/legal/privacypolicy.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
                 }}
             >
                 <div className="absolute inset-0 bg-slate-900/70"></div>
 
-                <div className="relative z-10 max-w-4xl px-6">
-                    <h1 className="text-5xl lg:text-6xl font-extrabold">
+                <div className="relative z-10 max-w-4xl px-6 text-center">
+
+                    <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
                         Privacy Policy
                     </h1>
 
-                    <p className="mt-6 text-xl text-slate-200">
+                    <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg leading-7 text-slate-200">
                         Protecting your information with transparency,
                         responsibility and industry best practices.
                     </p>
 
-                    <p className="mt-5 text-sm text-slate-300">
+                    <p className="mt-4 text-sm text-slate-300">
                         Last Updated • August 2026
                     </p>
+
                 </div>
             </section>
 

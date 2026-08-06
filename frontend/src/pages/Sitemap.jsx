@@ -33,22 +33,20 @@ const Sitemap = () => {
             {/* Hero */}
 
             <section
-                className="relative h-[420px] flex items-center justify-center text-center text-white"
+                className="relative min-h-[380px] py-12 flex items-center justify-center bg-cover bg-center text-white"
                 style={{
                     backgroundImage: "url('/legal/sitemap.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
                 }}
             >
                 <div className="absolute inset-0 bg-slate-900/70"></div>
 
-                <div className="relative z-10 max-w-4xl px-6">
+                <div className="relative z-10 max-w-4xl px-6 text-center">
 
-                    <h1 className="text-5xl lg:text-6xl font-extrabold">
+                    <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
                         Sitemap
                     </h1>
 
-                    <p className="mt-6 text-xl text-slate-200">
+                    <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg leading-7 text-slate-200">
                         Quickly navigate every section of the SteelNova Industries website.
                     </p>
 
