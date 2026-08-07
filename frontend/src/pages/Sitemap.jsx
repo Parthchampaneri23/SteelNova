@@ -31,15 +31,13 @@ const Sitemap = () => {
     return (
         <>
             {/* Hero */}
-
             <section
-                className="relative min-h-[380px] py-12 flex items-center justify-center bg-cover bg-center text-white"
+                className="relative h-[320px] flex items-center justify-center bg-cover bg-center text-white"
                 style={{
                     backgroundImage: "url('/legal/sitemap.png')",
                 }}
             >
                 <div className="absolute inset-0 bg-slate-900/70"></div>
-
                 <div className="relative z-10 max-w-4xl px-6 text-center">
 
                     <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
@@ -51,7 +49,6 @@ const Sitemap = () => {
                     </p>
 
                 </div>
-
             </section>
 
             {/* Cards */}

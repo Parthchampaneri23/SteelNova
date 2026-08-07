@@ -5,9 +5,8 @@ const PrivacyPolicy = () => {
     return (
         <>
             {/* Hero */}
-
             <section
-                className="relative min-h-[380px] py-12 flex items-center justify-center bg-cover bg-center text-white"
+                className="relative h-[320px] flex items-center justify-center bg-cover bg-center text-white"
                 style={{
                     backgroundImage: "url('/legal/privacypolicy.png')",
                 }}
