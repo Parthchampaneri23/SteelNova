@@ -1,28 +1,28 @@
 const IndustryHero = () => {
     return (
-        <section className="relative overflow-hidden">
+        <section className="relative">
 
             <img
                 src="/industries/industries-hero.png"
                 alt="Industries"
-                className="h-[400px] w-full object-cover"
+                className="h-[300px] w-full object-cover"
             />
 
             <div className="absolute inset-0 bg-slate-900/65"></div>
 
             <div className="absolute inset-0 flex items-center">
 
-                <div className="max-w-7xl mx-auto px-4 lg:px-5">
+                <div className="mx-auto w-full max-w-7xl px-4 lg:px-5">
 
-                    <span className="rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white">
+                    <span className="inline-block rounded-full bg-blue-600 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
                         Industries We Serve
                     </span>
 
-                    <h1 className="mt-6 max-w-3xl text-6xl font-bold leading-tight text-white">
+                    <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight text-white md:text-5xl">
                         Engineering Reliable Industrial Solutions For Every Industry
                     </h1>
 
-                    <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-200 md:text-lg md:leading-7">
                         SteelNova delivers world-class industrial equipment and fabrication
                         solutions trusted by leading industries across India and global markets.
                     </p>
