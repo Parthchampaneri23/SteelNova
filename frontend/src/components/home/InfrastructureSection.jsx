@@ -2,15 +2,14 @@ import infrastructureImage from "../../assets/images/industries/infrastructure.p
 
 const InfrastructureSection = () => {
     return (
-        <section className="py-14 bg-white">
-
+        <section>
             <div className="max-w-7xl mx-auto px-4 lg:px-5 grid lg:grid-cols-2 gap-16 items-stretch">
 
-                <div className="overflow-hidden rounded-3xl shadow-xl min-h-[400px]">
+                <div className="overflow-hidden rounded-3xl shadow-xl min-h-0 lg:min-h-[400px]">
                     <img
                         src={infrastructureImage}
                         alt="Infrastructure"
-                        className="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                        className="h-auto w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105 lg:h-full"
                     />
                 </div>
 
@@ -40,7 +39,6 @@ const InfrastructureSection = () => {
                 </div>
 
             </div>
-
         </section>
     );
 };
