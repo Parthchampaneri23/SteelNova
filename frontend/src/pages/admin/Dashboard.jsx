@@ -25,11 +25,11 @@ const Dashboard = () => {
     const fetchData = async () => {
         try {
             const contactRes = await axios.get(
-                "http://localhost:5000/api/contact"
+                "https://steelnova.onrender.com/api/contact"
             );
 
             const careerRes = await axios.get(
-                "http://localhost:5000/api/careers"
+                "https://steelnova.onrender.com/api/careers"
             );
 
             setContacts(contactRes.data.count);
@@ -107,14 +107,12 @@ const Dashboard = () => {
                     <table className="min-w-full">
 
                         <thead className="bg-slate-100">
-
                             <tr>
                                 <th className="px-4 py-3 text-left">Name</th>
                                 <th className="px-4 py-3 text-left">Email</th>
                                 <th className="px-4 py-3 text-left">Position</th>
                                 <th className="px-4 py-3 text-left">Status</th>
                             </tr>
-
                         </thead>
 
                         <tbody>
@@ -141,11 +139,9 @@ const Dashboard = () => {
                                         </td>
 
                                         <td className="px-4 py-3">
-
                                             <span className="rounded-full bg-yellow-100 px-3 py-1 text-xs font-semibold text-yellow-700">
                                                 {career.status}
                                             </span>
-
                                         </td>
 
                                     </tr>
@@ -155,14 +151,12 @@ const Dashboard = () => {
                             ) : (
 
                                 <tr>
-
                                     <td
                                         colSpan="4"
                                         className="py-6 text-center text-slate-500"
                                     >
                                         No applications found.
                                     </td>
-
                                 </tr>
 
                             )}

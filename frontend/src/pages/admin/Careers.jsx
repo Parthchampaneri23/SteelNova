@@ -5,7 +5,6 @@ import AdminLayout from "../../components/admin/AdminLayout";
 import CareerTable from "../../components/admin/CareerTable";
 
 const Careers = () => {
-
     const [careers, setCareers] = useState([]);
 
     useEffect(() => {
@@ -13,66 +12,47 @@ const Careers = () => {
     }, []);
 
     const fetchCareers = async () => {
-
         try {
-
             const res = await axios.get(
-                "http://localhost:5000/api/careers"
+                "https://steelnova.onrender.com/api/careers"
             );
 
             setCareers(res.data.data);
-
         } catch (error) {
-
             console.log(error);
-
         }
-
     };
 
     // Update Status
     const updateCareerStatus = async (id, status) => {
-
         try {
-
             await axios.put(
-                `http://localhost:5000/api/careers/${id}/status`,
+                `https://steelnova.onrender.com/api/careers/${id}/status`,
                 { status }
             );
 
             fetchCareers();
-
         } catch (error) {
-
             console.log(error);
-
         }
-
     };
 
     // Delete Career
     const deleteCareer = async (id) => {
-
         if (!window.confirm("Delete this application?")) return;
 
         try {
-
             await axios.delete(
-                `http://localhost:5000/api/careers/${id}`
+                `https://steelnova.onrender.com/api/careers/${id}`
             );
 
             fetchCareers();
-
         } catch (error) {
-
             console.log(error);
-
         }
-
     };
 
     return (
-
         <AdminLayout>
 
             <h1 className="mb-8 text-3xl font-bold">
@@ -86,7 +66,6 @@ const Careers = () => {
             />
 
         </AdminLayout>
-
     );
 };
 

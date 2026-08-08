@@ -5,7 +5,6 @@ import AdminLayout from "../../components/admin/AdminLayout";
 import ContactTable from "../../components/admin/ContactTable";
 
 const Contacts = () => {
-
     const [contacts, setContacts] = useState([]);
 
     useEffect(() => {
@@ -13,66 +12,47 @@ const Contacts = () => {
     }, []);
 
     const fetchContacts = async () => {
-
         try {
-
             const res = await axios.get(
-                "http://localhost:5000/api/contact"
+                "https://steelnova.onrender.com/api/contact"
             );
 
             setContacts(res.data.data);
-
         } catch (error) {
-
             console.log(error);
-
         }
-
     };
 
     // Update Status
     const updateContactStatus = async (id, status) => {
-
         try {
-
             await axios.put(
-                `http://localhost:5000/api/contact/${id}/status`,
+                `https://steelnova.onrender.com/api/contact/${id}/status`,
                 { status }
             );
 
             fetchContacts();
-
         } catch (error) {
-
             console.log(error);
-
         }
-
     };
 
     // Delete Contact
     const deleteContact = async (id) => {
-
         if (!window.confirm("Delete this enquiry?")) return;
 
         try {
-
             await axios.delete(
-                `http://localhost:5000/api/contact/${id}`
+                `https://steelnova.onrender.com/api/contact/${id}`
             );
 
             fetchContacts();
-
         } catch (error) {
-
             console.log(error);
-
         }
-
     };
 
     return (
-
         <AdminLayout>
 
             <h1 className="mb-8 text-3xl font-bold">
@@ -86,7 +66,6 @@ const Contacts = () => {
             />
 
         </AdminLayout>
-
     );
 };
 
