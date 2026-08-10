@@ -269,7 +269,7 @@ const TermsConditions = () => {
                                 </p>
 
                                 <p className="mt-2 text-slate-600">
-                                    📧 info@steelnova.com
+                                    📧 sales@steelnova.com
                                 </p>
 
                                 <p className="mt-2 text-slate-600">

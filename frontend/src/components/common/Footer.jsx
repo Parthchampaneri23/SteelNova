@@ -178,7 +178,7 @@ const Footer = () => {
 
                         <div className="flex gap-3">
                             <Mail className="text-blue-500" size={20} />
-                            <span>info@steelnova.com</span>
+                            <span>sales@steelnova.com</span>
                         </div>
 
                         <div className="flex gap-3">
