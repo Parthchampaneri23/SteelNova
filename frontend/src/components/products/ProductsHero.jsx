@@ -1,32 +1,30 @@
 const ProductsHero = () => {
     return (
         <section
-            className="relative h-[40vh] flex items-center justify-center bg-cover bg-center"
+            className="relative h-[40vh] flex items-center bg-cover bg-center"
             style={{
                 backgroundImage: "url('/products/products-hero.png')",
             }}
         >
+            {/* Overlay */}
             <div className="absolute inset-0 bg-slate-900/70"></div>
 
-            <div className="relative z-10 max-w-5xl px-6 text-center text-white">
-
-                <span className="inline-block rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold uppercase tracking-wider">
+            {/* Content */}
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-4 lg:px-5">
+                <span className="inline-block rounded-full bg-blue-600 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
                     Our Products
                 </span>
 
-                <h1 className="mt-6 text-5xl md:text-6xl font-bold">
+                <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight text-white md:text-5xl">
                     Engineered For Every Industry
                 </h1>
 
-                <p className="mt-6 text-lg md:text-xl text-slate-200 leading-8">
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-200 md:text-lg md:leading-7">
                     SteelNova manufactures premium industrial equipment including
-                    pumps, valves, pressure vessels, heat exchangers,
-                    storage tanks and custom fabrication solutions trusted by
-                    industries worldwide.
+                    pumps, valves, pressure vessels, heat exchangers, storage tanks
+                    and custom fabrication solutions trusted by industries worldwide.
                 </p>
-
             </div>
-
         </section>
     );
 };

@@ -36,8 +36,8 @@ export const productCategories = [
     },
     {
         id: 6,
-        title: "Process Equipment",
-        description: "Engineered process equipment solutions for every industry.",
+        title: "Custom Fabrication",
+        description: "Precision custom steel fabrication and engineered equipment.",
         image: "/category/process-equipment.jpg",
         count: 4,
     },

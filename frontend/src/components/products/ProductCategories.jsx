@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { productCategories } from "../../data/productCategories";
 
 const ProductCategories = () => {
@@ -29,9 +30,9 @@ const ProductCategories = () => {
 
                     {productCategories.map((category) => (
 
-                        <a
+                        <Link
                             key={category.id}
-                            href={`#${category.title
+                            to={`/products#${category.title
                                 .toLowerCase()
                                 .replace(/\s+/g, "-")}`}
                             className="group block overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
@@ -59,7 +60,7 @@ const ProductCategories = () => {
 
                             </div>
 
-                        </a>
+                        </Link>
 
                     ))}
 

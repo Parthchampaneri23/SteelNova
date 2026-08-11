@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="sticky top-0 z-40 bg-white shadow-sm">
-                <div className="max-w-[1500px] mx-auto h-20 px-6 flex items-center justify-between">
+                <div className="relative max-w-[1500px] mx-auto h-20 px-6 flex items-center justify-between">
 
                     <Logo />
 

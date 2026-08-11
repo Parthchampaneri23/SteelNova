@@ -52,15 +52,15 @@ const CertificatesSection = () => {
                         <div
                             key={certificate.id}
                             onClick={() => setSelectedCertificate(certificate)}
-                            className="group cursor-pointer overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                            className="group cursor-pointer rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                         >
 
-                            <div className="overflow-hidden">
+                            <div className="flex justify-center">
 
                                 <img
                                     src={certificate.image}
                                     alt={certificate.title}
-                                    className="h-72 w-full object-cover transition duration-700 group-hover:scale-105"
+                                    className="max-w-full max-h-96 object-contain mx-auto transition duration-700 group-hover:scale-105"
                                 />
 
                             </div>
@@ -70,10 +70,6 @@ const CertificatesSection = () => {
                                 <h3 className="text-2xl font-bold">
                                     {certificate.title}
                                 </h3>
-
-                                <p className="mt-4 text-slate-600">
-                                    Click to View Certificate
-                                </p>
 
                             </div>
 

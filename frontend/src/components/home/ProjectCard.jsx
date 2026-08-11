@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const ProjectCard = ({ project }) => {
     return (
         <Link
-            to="/projects"
+            to={`/projects/${project.slug}`}
             className="group block overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
         >
 
@@ -26,6 +27,11 @@ const ProjectCard = ({ project }) => {
                 <p className="mt-4 text-slate-600">
                     {project.description}
                 </p>
+
+                <div className="mt-6 flex items-center gap-2 font-semibold text-blue-600 group-hover:text-blue-700">
+                    <span>View Details</span>
+                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </div>
 
             </div>
 

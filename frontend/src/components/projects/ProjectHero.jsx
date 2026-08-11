@@ -1,29 +1,29 @@
 const ProjectHero = () => {
     return (
         <section
-            className="relative h-[280px] flex items-center justify-center bg-cover bg-center"
+            className="relative h-[280px] flex items-center bg-cover bg-center"
             style={{
                 backgroundImage: "url('/projects/projects-hero.png')",
             }}
         >
+            {/* Overlay */}
             <div className="absolute inset-0 bg-slate-900/70"></div>
 
-            <div className="relative z-10 max-w-4xl px-6 pt-6 sm:pt-8 text-center text-white">
-
-                <span className="inline-block rounded-full bg-blue-600 px-3 py-1 text-[10px] sm:px-5 sm:py-2 sm:text-sm font-semibold uppercase tracking-wider">
+            {/* Content */}
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-4 lg:px-5">
+                <span className="inline-block rounded-full bg-blue-600 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white sm:px-4 sm:py-1.5 sm:text-xs">
                     Our Projects
                 </span>
 
-                <h1 className="mt-2 sm:mt-4 text-xl sm:text-4xl lg:text-6xl font-bold leading-snug sm:leading-tight">
+                <h1 className="mt-2 max-w-3xl text-xl font-bold leading-snug text-white sm:mt-3 sm:text-4xl lg:text-5xl">
                     Engineering Excellence <br className="hidden sm:block" />
                     Delivered Worldwide
                 </h1>
 
-                <p className="mx-auto mt-2 sm:mt-3 max-w-3xl text-xs sm:text-base leading-5 sm:leading-7 text-slate-200 hidden sm:block">
+                <p className="mt-2 max-w-2xl text-xs leading-5 text-slate-200 sm:mt-3 sm:text-base sm:leading-7">
                     Explore some of our successful industrial projects across
                     Oil & Gas, Chemical Processing, and Water Treatment industries.
                 </p>
-
             </div>
         </section>
     );

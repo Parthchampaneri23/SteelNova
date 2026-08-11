@@ -1,82 +1,93 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { industries } from "../../data/industryData";
 
 const IndustryDetails = () => {
+    const [expanded, setExpanded] = useState(null);
+
+    const toggleExpand = (id, e) => {
+        if (e) e.stopPropagation();
+        setExpanded(expanded === id ? null : id);
+    };
+
     return (
         <section className="bg-white py-14">
-
             <div className="max-w-7xl mx-auto px-4 lg:px-5">
-
-                {industries.map((industry, index) => (
-
-                    <div
-                        key={industry.id}
-                        id={industry.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
-                        className="grid lg:grid-cols-12 gap-12 items-center mb-20 scroll-mt-28"
-                    >
-
-                        <div className={`overflow-hidden rounded-3xl shadow-xl min-h-[320px] lg:col-span-5 ${index % 2 !== 0 ? "lg:order-2" : ""}`}>
+                <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start">
+                    {industries.map((industry) => (
+                        <div
+                            key={industry.id}
+                            id={industry.title
+                                .toLowerCase()
+                                .replace(/[^a-z0-9]+/g, "-")}
+                            className="h-fit bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow cursor-pointer"
+                            onClick={(e) => toggleExpand(industry.id, e)}
+                        >
                             <img
                                 src={industry.image}
                                 alt={industry.title}
-                                className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                                className="h-48 w-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </div>
 
-                        <div className={`lg:col-span-7 ${index % 2 !== 0 ? "lg:order-1" : ""}`}>
+                            <div className="p-4">
+                                <h2 className="text-xl font-bold text-gray-800">
+                                    {industry.title}
+                                </h2>
 
-                            <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600">
-                                Industry
-                            </span>
+                                <p className="text-gray-600 mt-2 text-sm">
+                                    {industry.description}
+                                </p>
 
-                            <h2 className="mt-6 text-5xl font-bold">
-                                {industry.title}
-                            </h2>
+                                {/* View Details Button */}
+                                <button
+                                    type="button"
+                                    className="mt-3 inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-1 text-sm font-medium text-white hover:bg-blue-700 transition"
+                                    onClick={(e) =>
+                                        toggleExpand(industry.id, e)
+                                    }
+                                >
+                                    View Details <ArrowRight size={14} />
+                                </button>
 
-                            <p className="mt-6 text-lg leading-8 text-slate-600">
-                                {industry.description}
-                            </p>
-
-                            <div className="mt-8 space-y-4">
-
-                                {industry.products.map((item, i) => (
-
-                                    <div
-                                        key={i}
-                                        className="flex items-center gap-3"
-                                    >
-                                        <CheckCircle2
-                                            className="text-blue-600"
-                                            size={20}
-                                        />
-
-                                        <span>{item}</span>
-
+                                {/* Expanded Section */}
+                                <div
+                                    className={`mt-4 transition-all duration-300 ease-in-out ${expanded === industry.id
+                                            ? "max-h-screen opacity-100"
+                                            : "max-h-0 opacity-0 overflow-hidden"
+                                        }`}
+                                >
+                                    <div className="space-y-2">
+                                        {industry.products.map((item, i) => (
+                                            <div
+                                                key={i}
+                                                className="flex items-center gap-2"
+                                            >
+                                                <CheckCircle2
+                                                    className="text-blue-600"
+                                                    size={20}
+                                                />
+                                                <span className="text-gray-700 text-sm">
+                                                    {item}
+                                                </span>
+                                            </div>
+                                        ))}
                                     </div>
 
-                                ))}
-
+                                    <Link
+                                        to="/contact#quote-form"
+                                        className="mt-4 inline-flex items-center gap-3 rounded-full bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700 transition"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        Request Quote{" "}
+                                        <ArrowRight size={16} />
+                                    </Link>
+                                </div>
                             </div>
-
-                            <Link
-                                to="/contact#quote-form"
-                                className="mt-10 inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
-                            >
-                                Request Quote
-
-                                <ArrowRight size={18} />
-
-                            </Link>
-
                         </div>
-
-                    </div>
-
-                ))}
-
+                    ))}
+                </div>
             </div>
-
         </section>
     );
 };
