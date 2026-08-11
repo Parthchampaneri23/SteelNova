@@ -142,8 +142,8 @@ const OurExpertise = () => {
                             const Icon = item.icon;
 
                             return (
-                                <Link to={item.link} key={item.title} className="block">
-                                    <article className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                                <Link to={item.link} key={item.title} className="block h-full">
+                                    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl h-full">
                                         <div className="relative overflow-hidden">
 
                                             <img
@@ -160,7 +160,7 @@ const OurExpertise = () => {
 
                                         </div>
 
-                                        <div className="p-7">
+                                        <div className="p-7 flex flex-col flex-1">
 
                                             <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
                                                 {item.subtitle}
@@ -174,7 +174,7 @@ const OurExpertise = () => {
                                                 {item.description}
                                             </p>
 
-                                            <span className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 transition-colors hover:text-blue-800">
+                                            <span className="mt-auto inline-flex items-center gap-2 font-semibold text-blue-600 transition-colors hover:text-blue-800">
                                                 Explore {item.title}
                                                 <ArrowRight size={18} />
                                             </span>
