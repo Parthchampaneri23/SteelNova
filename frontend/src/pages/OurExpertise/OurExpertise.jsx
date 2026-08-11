@@ -142,50 +142,46 @@ const OurExpertise = () => {
                             const Icon = item.icon;
 
                             return (
-                                <article
-                                    key={item.title}
-                                    className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                                >
-                                    <div className="relative overflow-hidden">
+                                <Link to={item.link} key={item.title} className="block">
+                                    <article className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                                        <div className="relative overflow-hidden">
 
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                        />
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
 
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
 
-                                        <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg">
-                                            <Icon size={23} />
+                                            <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg">
+                                                <Icon size={23} />
+                                            </div>
+
                                         </div>
 
-                                    </div>
+                                        <div className="p-7">
 
-                                    <div className="p-7">
+                                            <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+                                                {item.subtitle}
+                                            </span>
 
-                                        <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-                                            {item.subtitle}
-                                        </span>
+                                            <h3 className="mt-2 text-2xl font-bold text-slate-900">
+                                                {item.title}
+                                            </h3>
 
-                                        <h3 className="mt-2 text-2xl font-bold text-slate-900">
-                                            {item.title}
-                                        </h3>
+                                            <p className="mt-4 leading-7 text-slate-600">
+                                                {item.description}
+                                            </p>
 
-                                        <p className="mt-4 leading-7 text-slate-600">
-                                            {item.description}
-                                        </p>
+                                            <span className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 transition-colors hover:text-blue-800">
+                                                Explore {item.title}
+                                                <ArrowRight size={18} />
+                                            </span>
 
-                                        <Link
-                                            to={item.link}
-                                            className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 transition-colors hover:text-blue-800"
-                                        >
-                                            Explore {item.title}
-                                            <ArrowRight size={18} />
-                                        </Link>
-
-                                    </div>
-                                </article>
+                                        </div>
+                                    </article>
+                                </Link>
                             );
                         })}
 
