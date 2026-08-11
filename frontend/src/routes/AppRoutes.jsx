@@ -13,6 +13,8 @@ import Projects from "../pages/Projects/Projects";
 import Resources from "../pages/Resources/Resources";
 import Careers from "../pages/Careers/Careers";
 import Contact from "../pages/Contact/Contact";
+import OurExpertise from "../pages/OurExpertise/OurExpertise";
+
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsConditions from "../pages/TermsConditions";
 import Sitemap from "../pages/Sitemap";
@@ -38,24 +40,78 @@ const AppRoutes = () => {
 
                     {/* Website Pages */}
                     <Route path="/" element={<Home />} />
+
                     <Route path="/about" element={<About />} />
+
                     <Route path="/products" element={<Products />} />
-                    <Route path="/products/:slug" element={<ProductDetails />} />
-                    <Route path="/projects/:slug" element={<ProjectDetails />} />
-                    <Route path="/industries" element={<Industries />} />
-                    <Route path="/infrastructure" element={<Infrastructure />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/resources" element={<Resources />} />
-                    <Route path="/careers" element={<Careers />} />
-                    <Route path="/contact" element={<Contact />} />
+
+                    <Route
+                        path="/products/:slug"
+                        element={<ProductDetails />}
+                    />
+
+                    {/* Our Expertise */}
+                    <Route
+                        path="/our-expertise"
+                        element={<OurExpertise />}
+                    />
+
+                    <Route
+                        path="/projects/:slug"
+                        element={<ProjectDetails />}
+                    />
+
+                    <Route
+                        path="/industries"
+                        element={<Industries />}
+                    />
+
+                    <Route
+                        path="/infrastructure"
+                        element={<Infrastructure />}
+                    />
+
+                    <Route
+                        path="/projects"
+                        element={<Projects />}
+                    />
+
+                    <Route
+                        path="/resources"
+                        element={<Resources />}
+                    />
+
+                    <Route
+                        path="/careers"
+                        element={<Careers />}
+                    />
+
+                    <Route
+                        path="/contact"
+                        element={<Contact />}
+                    />
 
                     {/* Footer Pages */}
-                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                    <Route path="/terms-conditions" element={<TermsConditions />} />
-                    <Route path="/sitemap" element={<Sitemap />} />
+                    <Route
+                        path="/privacy-policy"
+                        element={<PrivacyPolicy />}
+                    />
+
+                    <Route
+                        path="/terms-conditions"
+                        element={<TermsConditions />}
+                    />
+
+                    <Route
+                        path="/sitemap"
+                        element={<Sitemap />}
+                    />
 
                     {/* Admin Login */}
-                    <Route path="/admin/login" element={<Login />} />
+                    <Route
+                        path="/admin/login"
+                        element={<Login />}
+                    />
 
                     {/* Protected Admin Routes */}
                     <Route element={<ProtectedRoute />}>
@@ -80,10 +136,12 @@ const AppRoutes = () => {
                 </Route>
 
                 {/* 404 */}
-                <Route path="*" element={<NotFound />} />
+                <Route
+                    path="*"
+                    element={<NotFound />}
+                />
 
             </Routes>
-
         </BrowserRouter>
     );
 };

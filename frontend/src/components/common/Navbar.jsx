@@ -13,14 +13,13 @@ const Navbar = () => {
     return (
         <>
             <nav className="sticky top-0 z-40 bg-white shadow-sm">
-                <div className="relative max-w-[1500px] mx-auto h-20 px-6 flex items-center justify-between">
+                <div className="relative max-w-[1300px] mx-auto h-20 px-6 flex items-center justify-between">
 
                     <Logo />
 
                     <DesktopMenu />
 
                     <div className="hidden lg:flex items-center gap-3">
-
                         <QuoteButton />
                     </div>
 
@@ -30,6 +29,7 @@ const Navbar = () => {
                     >
                         <Menu size={30} />
                     </button>
+
                 </div>
             </nav>
 

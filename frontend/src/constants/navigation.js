@@ -3,10 +3,12 @@ export const navigation = [
         title: "Home",
         path: "/",
     },
+
     {
         title: "About",
         path: "/about",
     },
+
     {
         title: "Products",
         path: "/products",
@@ -37,18 +39,30 @@ export const navigation = [
             },
         ],
     },
+
     {
-        title: "Industries",
-        path: "/industries",
+        title: "Our Expertise",
+        path: "/our-expertise",
+        dropdown: [
+            {
+                title: "Overview",
+                path: "/our-expertise",
+            },
+            {
+                title: "Industries",
+                path: "/industries",
+            },
+            {
+                title: "Infrastructure",
+                path: "/infrastructure",
+            },
+            {
+                title: "Projects",
+                path: "/projects",
+            },
+        ],
     },
-    {
-        title: "Infrastructure",
-        path: "/infrastructure",
-    },
-    {
-        title: "Projects",
-        path: "/projects",
-    },
+
     {
         title: "Resources",
         path: "/resources",
@@ -67,10 +81,12 @@ export const navigation = [
             },
         ],
     },
+
     {
         title: "Careers",
         path: "/careers",
     },
+
     {
         title: "Contact",
         path: "/contact",
