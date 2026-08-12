@@ -36,13 +36,13 @@ const DesktopMenu = () => {
                                         <div key={category.id} className="flex flex-col py-2">
                                             <NavLink
                                                 to={`/products#${category.title.toLowerCase().replace(/\s+/g, "-")}`}
-                                                className="font-bold text-slate-900 hover:text-blue-600 text-sm tracking-wider uppercase mb-3 pb-2 border-b border-slate-100 transition-colors"
+                                                className="font-bold text-slate-900 hover:text-blue-600 text-sm tracking-wider uppercase mb-3 pb-2 border-b border-blue-600 transition-colors"
                                             >
                                                 {category.title}
                                             </NavLink>
                                             <ul className="list-disc pl-4 space-y-2 text-slate-400">
                                                 {catProducts.map((prod) => (
-                                                    <li key={prod.id} className="text-xs">
+                                                    <li key={prod.id} className="text-sm">
                                                         <NavLink
                                                             to={`/products/${prod.slug}`}
                                                             className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
