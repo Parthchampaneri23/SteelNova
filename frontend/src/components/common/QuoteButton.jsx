@@ -8,7 +8,7 @@ const QuoteButton = ({
     return (
         <Link
             to="/contact#quote-form"
-            className={`inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-700 ${className}`}
+            className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-md transition-all duration-200 hover:scale-105 hover:from-blue-700 hover:to-indigo-700 ${className}`}
         >
             {text}
             <ArrowRight size={20} />
