@@ -8,11 +8,11 @@ const ProductCard = ({ product }) => {
         >
 
             {/* Product Image */}
-            <div className="flex items-center justify-center bg-gray-50 overflow-hidden" style={{ height: "256px" }}>
+            <div className="h-64 bg-slate-50 overflow-hidden">
                 <img
                     src={product.image}
                     alt={product.name}
-                    className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-110"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                 />
             </div>
 
