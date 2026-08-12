@@ -27,25 +27,25 @@ const DesktopMenu = () => {
 
                     {item.dropdown && item.title === "Products" ? (
                         <div className={`absolute left-6 right-6 top-full ${productsOpen ? 'visible opacity-100 translate-y-0' : 'invisible opacity-0 translate-y-3'} transition-all duration-300 pt-0 z-50`}>
-                            <div className="bg-white shadow-2xl rounded-3xl border border-slate-100 p-8 grid grid-cols-6 gap-6">
+                            <div className="bg-white shadow-2xl rounded-3xl border border-slate-100 p-10 grid grid-cols-3 gap-x-12 gap-y-8">
                                 {productCategories.map((category) => {
                                     const catProducts = allProducts.filter(
                                         (p) => p.category === category.title
                                     );
                                     return (
-                                        <div key={category.id} className="flex flex-col bg-slate-50/50 p-4 rounded-2xl hover:bg-blue-50/40 hover:border-blue-100 hover:shadow-sm transition-all duration-300 border border-slate-100/50">
+                                        <div key={category.id} className="flex flex-col py-2">
                                             <NavLink
                                                 to={`/products#${category.title.toLowerCase().replace(/\s+/g, "-")}`}
-                                                className="font-bold text-slate-900 hover:text-blue-600 text-xs tracking-wider uppercase mb-3 pb-2 border-b border-slate-100 transition-colors"
+                                                className="font-bold text-slate-900 hover:text-blue-600 text-sm tracking-wider uppercase mb-3 pb-2 border-b border-slate-100 transition-colors"
                                             >
                                                 {category.title}
                                             </NavLink>
-                                            <ul className="space-y-2">
+                                            <ul className="list-disc pl-4 space-y-2 text-slate-400">
                                                 {catProducts.map((prod) => (
-                                                    <li key={prod.id}>
+                                                    <li key={prod.id} className="text-xs">
                                                         <NavLink
                                                             to={`/products/${prod.slug}`}
-                                                            className="text-xs text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all duration-200 block py-0.5"
+                                                            className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
                                                             onClick={() => setProductsOpen(false)}
                                                         >
                                                             {prod.name}
