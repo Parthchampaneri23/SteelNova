@@ -23,9 +23,15 @@ const ResourcesCTA = () => {
 
                 <div className="mt-10 flex flex-wrap justify-center gap-6">
 
-                    <button className="rounded-xl bg-white px-8 py-4 font-semibold text-slate-900 transition hover:scale-105">
+                    <a
+                        href="/catlogue/steelnovacatalogue.pdf"
+                        download="SteelNova_Catalogue.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-xl bg-white px-8 py-4 font-semibold text-slate-900 transition hover:scale-105 inline-block"
+                    >
                         Download Catalogue
-                    </button>
+                    </a>
 
                     <Link
                         to="/contact#quote-form"
