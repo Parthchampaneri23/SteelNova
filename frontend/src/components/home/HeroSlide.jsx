@@ -6,7 +6,7 @@ const HeroSlide = ({ slide }) => {
     return (
         <section className="min-h-[450px] lg:min-h-[calc(100vh-180px)] bg-gradient-to-r from-slate-50 via-blue-50 to-slate-100 flex items-center overflow-hidden">
 
-            <div className="max-w-7xl mx-auto px-4 lg:px-5 py-6 md:py-10 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-12">
+            <div className="max-w-7xl mx-auto px-4 lg:px-5 pt-6 pb-16 md:py-10 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-12">
 
                 {/* Left Content */}
 
