@@ -1,28 +1,33 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
     const { pathname, hash } = useLocation();
+    const prevPathname = useRef(pathname);
 
     useEffect(() => {
+        // If navigating to a different page, instantly reset scroll to the top
+        if (prevPathname.current !== pathname) {
+            window.scrollTo(0, 0);
+        }
+
         if (hash) {
             // Wait for the page to render before scrolling
             setTimeout(() => {
-                const element = document.querySelector(hash);
-
-                if (element) {
-                    element.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
+                try {
+                    const element = document.querySelector(hash);
+                    if (element) {
+                        element.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                } catch (e) {
+                    // ignore invalid selector
                 }
             }, 100);
-        } else {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
         }
+        prevPathname.current = pathname;
     }, [pathname, hash]);
 
     return null;

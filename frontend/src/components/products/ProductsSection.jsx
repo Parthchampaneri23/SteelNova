@@ -23,11 +23,20 @@ const ProductsSection = () => {
             if (matchedCategory) {
                 setSelectedCategory(matchedCategory);
                 
-                // Smooth scroll to the products display section
-                const element = document.getElementById("products-display-section");
-                if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
-                }
+                // Allow state update and render before scrolling
+                setTimeout(() => {
+                    const element = document.getElementById("category-header-title") || document.getElementById("products-display-section");
+                    if (element) {
+                        const navbarOffset = 100; // sticky header offset
+                        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                        const offsetPosition = elementPosition - navbarOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                }, 100);
             }
         } else {
             setSelectedCategory("All");
@@ -104,7 +113,7 @@ const ProductsSection = () => {
                     return (
                         <>
                             {selectedCategory !== "All" && (
-                                <div className="mb-14 text-center">
+                                <div id="category-header-title" className="mb-14 text-center">
                                     <span className="uppercase tracking-[0.3em] text-blue-600 font-semibold">
                                         {selectedCategory}
                                     </span>
