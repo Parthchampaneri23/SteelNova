@@ -37,6 +37,7 @@ const DesktopMenu = () => {
                                             <NavLink
                                                 to={`/products#${category.title.toLowerCase().replace(/\s+/g, "-")}`}
                                                 className="font-bold text-slate-900 hover:text-blue-600 text-sm tracking-wider uppercase mb-3 pb-2 border-b border-blue-600 transition-colors"
+                                                onClick={() => setProductsOpen(false)}
                                             >
                                                 {category.title}
                                             </NavLink>
