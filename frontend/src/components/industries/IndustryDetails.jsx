@@ -1,10 +1,31 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { industries } from "../../data/industryData";
 
 const IndustryDetails = () => {
     const [expanded, setExpanded] = useState(null);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const targetId = location.hash.replace("#", "");
+            const matchedIndustry = industries.find(
+                (ind) =>
+                    ind.title.toLowerCase().replace(/[^a-z0-9]+/g, "-") === targetId
+            );
+            if (matchedIndustry) {
+                setExpanded(matchedIndustry.id);
+                // Allow a small timeout for render to complete before scrolling
+                setTimeout(() => {
+                    const element = document.getElementById(targetId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                }, 100);
+            }
+        }
+    }, [location.hash]);
 
     const toggleExpand = (id, e) => {
         if (e) e.stopPropagation();
@@ -53,8 +74,8 @@ const IndustryDetails = () => {
                                 {/* Expanded Section */}
                                 <div
                                     className={`mt-4 transition-all duration-300 ease-in-out ${expanded === industry.id
-                                            ? "max-h-screen opacity-100"
-                                            : "max-h-0 opacity-0 overflow-hidden"
+                                        ? "max-h-screen opacity-100"
+                                        : "max-h-0 opacity-0 overflow-hidden"
                                         }`}
                                 >
                                     <div className="space-y-2">

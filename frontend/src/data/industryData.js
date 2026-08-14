@@ -60,7 +60,7 @@ export const industries = [
         title: "Food & Beverage",
         image: "/industries/food_processed.jpg",
         description:
-            "Hygienic stainless steel solutions for food and beverage manufacturing.",
+            "Hygienic stainless steel solutions for food and beverage manufacturing, designed for  superior performance.",
         products: [
             "Stainless Steel Tanks",
             "Plate Heat Exchangers",
@@ -88,7 +88,7 @@ export const industries = [
         title: "Marine",
         image: "/industries/marine_processed.jpg",
         description:
-            "Heavy-duty fabricated systems built for harsh marine environments.",
+            "Heavy-duty fabricated systems built for harsh marine environments, delivering reliable performance and durability.",
         products: [
             "Marine Pumps",
             "Industrial Valves",
