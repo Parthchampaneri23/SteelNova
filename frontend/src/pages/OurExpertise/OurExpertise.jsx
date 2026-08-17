@@ -104,9 +104,7 @@ const OurExpertise = () => {
                         </h1>
 
                         <p className="mt-2 max-w-2xl text-xs leading-5 text-slate-200 sm:mt-3 sm:text-base sm:leading-7 md:text-lg">
-                            Delivering reliable engineering solutions through industry
-                            expertise, advanced infrastructure and proven project
-                            capabilities.
+                            Delivering reliable engineering solutions through industry expertise, advanced infrastructure, and proven capabilities
                         </p>
                     </div>
                 </div>
