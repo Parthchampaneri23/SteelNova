@@ -21,13 +21,10 @@ const InfrastructureHero = () => {
                     <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight text-white md:text-5xl">
                         Advanced Manufacturing.
                         Precision Engineering.
-                        Trusted Quality.
                     </h1>
 
                     <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-200 md:text-lg md:leading-7">
-                        Equipped with cutting-edge machinery, skilled professionals,
-                        and world-class manufacturing capabilities to deliver
-                        reliable industrial solutions.
+                        Equipped with advanced machinery and skilled professionals to deliver reliable industrial solution
                     </p>
 
                 </div>

@@ -23,8 +23,7 @@ const IndustryHero = () => {
                     </h1>
 
                     <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-200 md:text-lg md:leading-7">
-                        SteelNova delivers world-class industrial equipment and fabrication
-                        solutions trusted by leading industries across India and global markets.
+                        SteelNova delivers world-class industrial equipment and fabrication solutions trusted across India and global markets.
                     </p>
 
                 </div>
