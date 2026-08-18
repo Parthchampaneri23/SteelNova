@@ -22,7 +22,7 @@ const ProcessCard = ({ step }) => {
     return (
         <div
             ref={cardRef}
-            className={`group flex flex-col items-center space-y-2 transition-opacity transform duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            className={`group flex flex-col items-center bg-white border border-slate-100 rounded-2xl p-6 shadow-sm space-y-2 transition-all transform duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 } hover:scale-105 hover:shadow-lg`}
         >
             {/* Number */}
@@ -41,7 +41,7 @@ const ProcessCard = ({ step }) => {
                 {step.title}
             </h3>
 
-            <p className="mt-4 leading-7 text-slate-600 transition-colors duration-300 group-hover:text-slate-800">
+            <p className="mt-4 leading-7 text-slate-600 text-center transition-colors duration-300 group-hover:text-slate-800">
                 {step.description}
             </p>
         </div>
